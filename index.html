@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Here For You</title>
+
+  <meta name="description" content="Here For You - Fashion Watches and Mini Fans">
+  <meta name="keywords" content="Here For You, watches, mini fan, Myanmar online shop">
+
+  <title>Here For You | Watches & Mini Fans</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,72 +22,117 @@
     }
 
     header {
-      background: #f4d9d0;
+      background: linear-gradient(135deg, #f8d9d2, #f5c4d0);
       text-align: center;
-      padding: 30px 15px;
+      padding: 45px 15px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 38px;
+      letter-spacing: 1px;
     }
 
     header p {
-      margin-top: 8px;
+      margin: 12px 0 0;
+      font-size: 16px;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 25px 15px;
+      padding: 30px 18px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #777;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
     }
 
     .product {
       background: white;
-      border-radius: 15px;
+      border-radius: 20px;
       padding: 15px;
       text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
     }
 
     .product img {
       width: 100%;
-      height: 220px;
+      height: 280px;
       object-fit: cover;
-      border-radius: 12px;
+      border-radius: 16px;
     }
 
     .product h3 {
-      margin-bottom: 8px;
+      margin: 16px 0 8px;
+      font-size: 21px;
     }
 
     .price {
       font-weight: bold;
       font-size: 18px;
+      color: #d46a83;
     }
 
-    .contact {
-      text-align: center;
-      margin-top: 35px;
-      padding: 25px;
-      background: #f4d9d0;
-      border-radius: 15px;
-    }
-
-    .contact a {
+    .buy-btn {
       display: inline-block;
       margin-top: 10px;
-      padding: 12px 22px;
+      padding: 11px 24px;
       background: #333;
       color: white;
       text-decoration: none;
       border-radius: 25px;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 45px;
+      padding: 30px 20px;
+      background: #f4d9d0;
+      border-radius: 20px;
+    }
+
+    .contact h2 {
+      margin-top: 0;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 13px 30px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #888;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -93,31 +146,76 @@
 
 <div class="container">
 
-  <h2>Our Products</h2>
+  <div class="section-title">
+    <h2>Our Products</h2>
+    <p>Simple • Cute • Affordable</p>
+  </div>
 
   <div class="products">
 
+    <!-- WATCH -->
     <div class="product">
-      <img src="https://via.placeholder.com/400x400?text=Watch" alt="Watch">
+
+      <img
+        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+        alt="Fashion Watch">
+
       <h3>Fashion Watch</h3>
-      <p class="price">Price - Contact Us</p>
+
+      <p class="price">
+        Price - Contact Us
+      </p>
+
+      <a class="buy-btn" href="#contact">
+        Order Now
+      </a>
+
     </div>
 
+
+    <!-- MINI FAN -->
     <div class="product">
-      <img src="https://via.placeholder.com/400x400?text=Mini+Fan" alt="Mini Fan">
+
+      <img
+        src="https://images.unsplash.com/photo-1591105866065-3c4f8b1f2d5e?auto=format&fit=crop&w=800&q=80"
+        alt="Mini Fan">
+
       <h3>Mini Fan</h3>
-      <p class="price">Price - Contact Us</p>
+
+      <p class="price">
+        Price - Contact Us
+      </p>
+
+      <a class="buy-btn" href="#contact">
+        Order Now
+      </a>
+
     </div>
 
   </div>
 
-  <div class="contact">
-    <h2>Order Now</h2>
-    <p>For orders and enquiries, please contact us.</p>
-    <a href="#">Contact Us</a>
+
+  <!-- CONTACT -->
+  <div class="contact" id="contact">
+
+    <h2>Order Now 🛍️</h2>
+
+    <p>
+      For orders and enquiries, please contact us.
+    </p>
+
+    <a class="contact-btn" href="#">
+      Contact Us
+    </a>
+
   </div>
 
 </div>
+
+
+<footer>
+  © 2026 Here For You. All Rights Reserved.
+</footer>
 
 </body>
 </html>
