@@ -1,226 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Here For You - Fashion Watches and Mini Fans">
-  <meta name="keywords" content="Here For You, watches, mini fan, Myanmar online shop">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <title>Here For You | Watches & Mini Fans</title>
+  <meta name="description"
+        content="Here For You - Cute and affordable fashion watches, mini fans and lifestyle products.">
+
+  <meta name="keywords"
+        content="Here For You, fashion watch, mini fan, Myanmar online shop">
+
+  <meta name="author"
+        content="Here For You">
+
+  <title>Here For You | Fashion • Watches • Mini Fans</title>
 
   <style>
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #fffaf7;
-      color: #333;
+      background: #fff8fa;
+      color: #3d3035;
     }
+
+
+    /* =========================
+       TOP BAR
+    ========================== */
+
+    .top-bar {
+      background: #3d3035;
+      color: white;
+      text-align: center;
+      padding: 9px 10px;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================== */
 
     header {
-      background: linear-gradient(135deg, #f8d9d2, #f5c4d0);
+      background: linear-gradient(
+        135deg,
+        #f9d9e2,
+        #fff0f4,
+        #f7d0dc
+      );
+
       text-align: center;
-      padding: 45px 15px;
+      padding: 55px 20px 50px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 38px;
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 45px;
+      font-weight: bold;
+      color: #8d5268;
       letter-spacing: 1px;
     }
 
-    header p {
-      margin: 12px 0 0;
+    .tagline {
+      margin-top: 12px;
+      color: #654c56;
       font-size: 16px;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 18px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .section-title h2 {
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: #777;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .product {
-      background: white;
-      border-radius: 20px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-      transition: transform 0.2s;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-    }
-
-    .product img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 16px;
-    }
-
-    .product h3 {
-      margin: 16px 0 8px;
-      font-size: 21px;
-    }
-
-    .price {
-      font-weight: bold;
-      font-size: 18px;
-      color: #d46a83;
-    }
-
-    .buy-btn {
+    .header-button {
       display: inline-block;
-      margin-top: 10px;
-      padding: 11px 24px;
-      background: #333;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-size: 14px;
-    }
-
-    .contact {
-      text-align: center;
-      margin-top: 45px;
-      padding: 30px 20px;
-      background: #f4d9d0;
-      border-radius: 20px;
-    }
-
-    .contact h2 {
-      margin-top: 0;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 13px 30px;
-      background: #333;
+      margin-top: 25px;
+      padding: 13px 28px;
+      background: #9c5d76;
       color: white;
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
+      box-shadow: 0 5px 15px rgba(120,60,90,0.18);
     }
+
+
+    /* =========================
+       CONTAINER
+    ========================== */
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 45px 18px;
+    }
+
+
+    /* =========================
+       SECTION TITLE
+    ========================== */
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .section-title .small-title {
+      color: #b36a84;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      color: #4c3740;
+    }
+
+    .section-title p {
+      margin-top: 10px;
+      color: #8b777f;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       PRODUCTS
+    ========================== */
+
+    .products {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+      gap: 28px;
+    }
+
+
+    /* =========================
+       PRODUCT CARD
+    ========================== */
+
+    .product {
+      position: relative;
+      background: white;
+      border-radius: 22px;
+      padding: 14px;
+      text-align: center;
+
+      box-shadow:
+        0 8px 30px rgba(110, 70, 85, 0.09);
+
+      transition: 0.25s;
+      overflow: hidden;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+
+      box-shadow:
+        0 14px 35px rgba(110, 70, 85, 0.15);
+    }
+
+
+    /* =========================
+       NEW BADGE
+    ========================== */
+
+    .badge {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+
+      background: #9c5d76;
+      color: white;
+
+      padding: 7px 12px;
+      border-radius: 20px;
+
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+
+      z-index: 2;
+    }
+
+
+    /* =========================
+       PRODUCT IMAGE
+    ========================== */
+
+    .product img {
+      width: 100%;
+      height: 300px;
+
+      object-fit: cover;
+
+      border-radius: 17px;
+      display: block;
+    }
+
+
+    /* =========================
+       PRODUCT TEXT
+    ========================== */
+
+    .product h3 {
+      margin-top: 18px;
+      font-family: Georgia, serif;
+      font-size: 22px;
+      color: #4d3841;
+    }
+
+    .product-description {
+      margin-top: 8px;
+      color: #8b777f;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .price {
+      margin-top: 12px;
+
+      font-size: 18px;
+      font-weight: bold;
+
+      color: #a05270;
+    }
+
+
+    /* =========================
+       ORDER BUTTON
+    ========================== */
+
+    .order-btn {
+      display: inline-block;
+
+      margin-top: 15px;
+
+      padding: 12px 25px;
+
+      background: #9c5d76;
+      color: white;
+
+      text-decoration: none;
+
+      border-radius: 28px;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      transition: 0.2s;
+    }
+
+    .order-btn:hover {
+      background: #7f465e;
+      transform: scale(1.03);
+    }
+
+
+    /* =========================
+       ABOUT SECTION
+    ========================== */
+
+    .about {
+      margin-top: 55px;
+
+      background: linear-gradient(
+        135deg,
+        #fff0f4,
+        #fde0e8
+      );
+
+      border-radius: 25px;
+
+      padding: 35px 25px;
+
+      text-align: center;
+    }
+
+    .about h2 {
+      font-family: Georgia, serif;
+      color: #704758;
+      margin-bottom: 12px;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: auto;
+
+      color: #705c64;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      margin-top: 45px;
+
+      background: #3d3035;
+
+      color: white;
+
+      border-radius: 25px;
+
+      padding: 38px 20px;
+
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: Georgia, serif;
+      font-size: 28px;
+    }
+
+    .contact p {
+      margin-top: 10px;
+      color: #eadde2;
+      font-size: 14px;
+    }
+
+    .contact-buttons {
+      margin-top: 22px;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+
+    /* =========================
+       CONTACT BUTTONS
+    ========================== */
+
+    .contact-btn {
+      display: inline-block;
+
+      padding: 12px 22px;
+
+      border-radius: 28px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      font-size: 14px;
+    }
+
+    .call-btn {
+      background: white;
+      color: #3d3035;
+    }
+
+    .viber-btn {
+      background: #9c5d76;
+      color: white;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
       text-align: center;
-      padding: 25px 15px;
-      color: #888;
-      font-size: 14px;
+
+      padding: 28px 15px;
+
+      color: #9a858d;
+
+      font-size: 13px;
     }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 600px) {
+
+      .brand {
+        font-size: 35px;
+      }
+
+      header {
+        padding: 42px 15px;
+      }
+
+      .container {
+        padding: 35px 14px;
+      }
+
+      .section-title h2 {
+        font-size: 27px;
+      }
+
+      .product img {
+        height: 270px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
-<header>
-  <h1>Here For You</h1>
-  <p>Fashion • Watches • Mini Fans</p>
-</header>
 
-<div class="container">
+  <!-- TOP BAR -->
 
-  <div class="section-title">
-    <h2>Our Products</h2>
-    <p>Simple • Cute • Affordable</p>
-  </div>
-
-  <div class="products">
-
-    <!-- WATCH -->
-    <div class="product">
-
-      <img
-        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
-        alt="Fashion Watch">
-
-      <h3>Fashion Watch</h3>
-
-      <p class="price">
-        Price - Contact Us
-      </p>
-
-      <a class="buy-btn" href="#contact">
-        Order Now
-      </a>
-
-    </div>
-
-
-    <!-- MINI FAN -->
-    <div class="product">
-
-      <img
-        src="https://images.unsplash.com/photo-1591105866065-3c4f8b1f2d5e?auto=format&fit=crop&w=800&q=80"
-        alt="Mini Fan">
-
-      <h3>Mini Fan</h3>
-
-      <p class="price">
-        Price - Contact Us
-      </p>
-
-      <a class="buy-btn" href="#contact">
-        Order Now
-      </a>
-
-    </div>
-
+  <div class="top-bar">
+    ✨ Welcome to Here For You ✨
   </div>
 
 
-  <!-- CONTACT -->
-<div class="contact" id="contact">
+  <!-- HEADER -->
 
-  <h2>Order Now 🛍️</h2>
+  <header>
 
-  <p>
-    Order or ask about our products.
-  </p>
+    <div class="brand">
+      Here For You
+    </div>
 
-  <a class="contact-btn" href="tel:+959974439104">
-    📞 Call Now
-  </a>
+    <div class="tagline">
+      Little things, made for you. ♡
+    </div>
 
-  <a class="contact-btn"
-     href="viber://chat?number=%2B959974439104">
-    💜 Viber
-  </a>
+    <a
+      class="header-button"
+      href="#products">
+      Shop Now
+    </a>
 
-</div>
-
-</div>
+  </header>
 
 
-<footer>
-  © 2026 Here For You. All Rights Reserved.
-</footer>
+
+  <!-- MAIN -->
+
+  <main class="container">
+
+
+    <!-- PRODUCT SECTION -->
+
+    <section id="products">
+
+      <div class="section-title">
+
+        <div class="small-title">
+          New Collection
+        </div>
+
+        <h2>
+          Our Products
+        </h2>
+
+        <p>
+          Cute • Simple • Affordable
+        </p>
+
+      </div>
+
+
+      <div class="products">
+
+
+        <!-- WATCH -->
+
+        <div class="product">
+
+          <div class="badge">
+            NEW
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+            alt="Fashion Watch">
+
+          <h3>
+            Fashion Watch
+          </h3>
+
+          <p class="product-description">
+            Stylish everyday watch for your
+            simple and beautiful look.
+          </p>
+
+          <p class="price">
+            Price - Contact Us
+          </p>
+
+          <a
+            class="order-btn"
+            href="viber://chat?number=%2B959974439104">
+
+            🛍️ Order Now
+
+          </a>
+
+        </div>
+
+
+
+        <!-- MINI FAN -->
+
+        <div class="product">
+
+          <div class="badge">
+            NEW
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1591105866065-3c4f8b1f2d5e?auto=format&fit=crop&w=900&q=85"
+            alt="Mini Fan">
+
+          <h3>
+            Mini Fan
+          </h3>
+
+          <p class="product-description">
+            Compact and convenient fan
+            for everyday use.
+          </p>
+
+          <p class="price">
+            Price - Contact Us
+          </p>
+
+          <a
+            class="order-btn"
+            href="viber://chat?number=%2B959974439104">
+
+            🛍️ Order Now
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+      <h2>
+        About Here For You
+      </h2>
+
+      <p>
+        Welcome to Here For You.
+        We bring you cute, useful and
+        affordable products that are
+        perfect for everyday life.
+        Stay tuned for more new arrivals. ♡
+      </p>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+      <h2>
+        Need Help? 💕
+      </h2>
+
+      <p>
+        Order or ask about our products.
+        We are here for you.
+      </p>
+
+
+      <div class="contact-buttons">
+
+        <a
+          class="contact-btn call-btn"
+          href="tel:+959974439104">
+
+          📞 Call Now
+
+        </a>
+
+
+        <a
+          class="contact-btn viber-btn"
+          href="viber://chat?number=%2B959974439104">
+
+          💜 Viber
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Here For You
+    <br>
+    Made with ♡
+
+  </footer>
+
 
 </body>
+
 </html>
