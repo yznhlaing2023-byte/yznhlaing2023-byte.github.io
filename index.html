@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Here For You | Online Shop</title>
-<meta name="description" content="Here For You - Watches, Mini Fans, Fashion, Bags and Accessories.">
-<meta name="keywords" content="watches, mini fans, fashion, bags, accessories, Myanmar online shop">
+
+<meta
+  name="description"
+  content="Here For You - Watches, Mini Fans, Fashion, Bags and Accessories."
+>
 
 <style>
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -16,10 +22,12 @@
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   background:#fff8fb;
   color:#3d3036;
 }
+
+/* HEADER */
 
 header{
   background:linear-gradient(135deg,#f7dce7,#fff7fa);
@@ -35,8 +43,9 @@ header h1{
 
 header p{
   color:#805d6d;
-  font-size:16px;
 }
+
+/* NAV */
 
 nav{
   position:sticky;
@@ -56,9 +65,7 @@ nav a{
   font-weight:bold;
 }
 
-nav a:hover{
-  color:#c56d91;
-}
+/* CONTAINER */
 
 .container{
   max-width:1150px;
@@ -66,9 +73,11 @@ nav a:hover{
   padding:25px 18px;
 }
 
+/* SEARCH */
+
 .search-box{
-  margin:10px auto 22px;
   max-width:650px;
+  margin:10px auto 22px;
 }
 
 .search-box input{
@@ -83,8 +92,9 @@ nav a:hover{
 
 .search-box input:focus{
   border-color:#c9789b;
-  box-shadow:0 0 0 3px #f8e6ee;
 }
+
+/* CATEGORY */
 
 .categories{
   display:flex;
@@ -101,15 +111,15 @@ nav a:hover{
   padding:10px 17px;
   border-radius:25px;
   cursor:pointer;
-  font-size:14px;
 }
 
-.category-btn:hover,
-.category-btn.active{
+.category-btn.active,
+.category-btn:hover{
   background:#b96889;
   color:white;
-  border-color:#b96889;
 }
+
+/* PRODUCTS */
 
 .product-grid{
   display:grid;
@@ -122,20 +132,18 @@ nav a:hover{
   border-radius:18px;
   overflow:hidden;
   box-shadow:0 5px 18px rgba(100,50,70,.08);
-  transition:.25s;
   cursor:pointer;
+  transition:.25s;
 }
 
 .product:hover{
   transform:translateY(-4px);
-  box-shadow:0 10px 25px rgba(100,50,70,.13);
 }
 
 .product img{
   width:100%;
   height:230px;
   object-fit:cover;
-  display:block;
 }
 
 .product-info{
@@ -144,13 +152,13 @@ nav a:hover{
 
 .product-info h3{
   color:#583b47;
-  margin-bottom:8px;
+  margin:6px 0;
 }
 
 .product-price{
   color:#b45f80;
-  font-weight:bold;
   font-size:18px;
+  font-weight:bold;
 }
 
 .product-stock{
@@ -166,12 +174,25 @@ nav a:hover{
   color:#c33e4e;
 }
 
+.badge{
+  display:inline-block;
+  background:#f4dce6;
+  color:#704257;
+  padding:5px 9px;
+  border-radius:15px;
+  font-size:12px;
+}
+
+/* NO RESULT */
+
 .no-result{
   display:none;
   text-align:center;
   padding:50px 10px;
   color:#8a6b77;
 }
+
+/* ABOUT / CONTACT */
 
 .about,
 .contact{
@@ -203,6 +224,8 @@ nav a:hover{
   color:white;
   font-weight:bold;
 }
+
+/* FOOTER */
 
 footer{
   text-align:center;
@@ -247,7 +270,6 @@ footer{
   color:#6f4055;
   font-size:25px;
   cursor:pointer;
-  z-index:5;
 }
 
 .modal-image{
@@ -263,7 +285,7 @@ footer{
 
 .modal-content h2{
   color:#613d4c;
-  margin-bottom:8px;
+  margin:10px 0;
 }
 
 .modal-description{
@@ -296,7 +318,14 @@ select,
 
 .stock-text{
   margin:10px 0;
-  font-size:14px;
+}
+
+.order-summary{
+  background:#fff5f8;
+  padding:13px;
+  border-radius:12px;
+  margin-top:15px;
+  line-height:1.7;
 }
 
 .order-btn{
@@ -312,38 +341,23 @@ select,
   cursor:pointer;
 }
 
-.order-btn:hover{
-  background:#9f506f;
-}
-
-.order-summary{
-  background:#fff5f8;
-  padding:13px;
-  border-radius:12px;
-  margin-top:15px;
-  font-size:14px;
-  line-height:1.7;
-}
-
-.badge{
-  display:inline-block;
-  background:#f4dce6;
-  color:#704257;
-  padding:5px 9px;
-  border-radius:15px;
-  font-size:12px;
-  margin-bottom:8px;
+.order-btn:disabled{
+  opacity:.5;
+  cursor:not-allowed;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
+
   .product-grid{
     grid-template-columns:repeat(3,1fr);
   }
+
 }
 
 @media(max-width:650px){
+
   header h1{
     font-size:34px;
   }
@@ -375,897 +389,302 @@ select,
   .modal-content{
     padding:25px 20px;
   }
+
 }
 
-@media(max-width:400px){
-  .product-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .product img{
-    height:165px;
-  }
-
-  .product-info{
-    padding:11px;
-  }
-
-  .product-info h3{
-    font-size:15px;
-  }
-
-  .product-price{
-    font-size:16px;
-  }
-}
 </style>
 </head>
 
+
 <body>
 
+
+<!-- HEADER -->
+
 <header>
+
   <h1>Here For You</h1>
+
   <p>Simple • Cute • Useful • For You</p>
+
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav>
+
   <a href="#home">Home</a>
+
   <a href="#shop">Shop</a>
+
   <a href="#about">About</a>
+
   <a href="#contact">Contact</a>
+
 </nav>
 
-<section id="home">
-  <div class="container">
 
-    <div class="search-box">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="🔎 Search products..."
-        oninput="searchProducts()"
-      >
-    </div>
-
-    <div class="categories">
-
-      <button
-        class="category-btn active"
-        onclick="filterProducts('all', this)">
-        All
-      </button>
-
-      <button
-        class="category-btn"
-        onclick="filterProducts('watch', this)">
-        ⌚ Watches
-      </button>
-
-      <button
-        class="category-btn"
-        onclick="filterProducts('fan', this)">
-        🌬️ Mini Fans
-      </button>
-
-      <button
-        class="category-btn"
-        onclick="filterProducts('fashion', this)">
-        👗 Fashion
-      </button>
-
-      <button
-        class="category-btn"
-        onclick="filterProducts('bag', this)">
-        👜 Bags
-      </button>
-
-      <button
-        class="category-btn"
-        onclick="filterProducts('accessory', this)">
-        🎀 Accessories
-      </button>
-
-    </div>
-
-    <div id="shop" class="product-grid">
-
-      <!-- PRODUCT 1 -->
-      <div
-        class="product"
-        data-category="watch"
-        onclick="openProduct(0)"
-      >
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85">
-        <div class="product-info">
-          <span class="badge">Watches</span>
-          <h3>Fashion Watch</h3>
-          <div class="product-price">25,000 Ks</div>
-          <div class="product-stock in-stock">● In Stock</div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 2 -->
-      <div
-        class="product"
-        data-category="watch"
-        onclick="openProduct(1)"
-      >
-        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85">
-        <div class="product-info">
-          <span class="badge">Watches</span>
-          <h3>Classic Watch</h3>
-          <div class="product-price">30,000 Ks</div>
-          <div class="product-stock in-stock">● In Stock</div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 3 -->
-      <div
-        class="product"
-        data-category="fan"
-        onclick="openProduct(2)"
-      >
-        <img src="https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85">
-        <div class="product-info">
-          <span class="badge">Mini Fans</span>
-          <h3>Mini Portable Fan</h3>
-          <div class="product-price">18,000 Ks</div>
-          <div class="product-stock in-stock">● In Stock</div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 4 -->
-      <div
-        class="product"
-        data-category="fan"
-        onclick="openProduct(3)"
-      >
-        <img src="https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85">
-        <div class="product-info">
-          <span class="badge">Mini Fans</span>
-          <h3>Portable Cooling Fan</h3>
-          <div class="product-price">22,000 Ks</div>
-          <div class="product-stock in-stock">● In Stock</div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 5 -->
-      <div
-        class="product"
-        data-category="fashion"
-        onclick="openProduct(4)"
-      >
-        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85">
-        <div class="product-info">
-          <span class="badge">Fashion</span>
-          <h3>Everyday Fashion</h3>
-          <div class="product-price">35,000 Ks</div>
-          <div class="product-stock in-stock">● In Stock</div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 6 -->
-      <div
-        class="product"
-        data-category="bag"
-        onclick="openProduct(5)"
-      >
-        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85">
-        <div class="product-info">
-          <span class="badge">Bags</span>
-          <h3>Everyday Bag</h3>
-          <div class="product-price">28,000 Ks</div>
-          <div class="product-stock in-stock">● In Stock</div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 7 -->
-      <div
-        class="product"
-        data-category="accessory"
-        onclick="openProduct(6)"
-      >
-        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85">
-        <div class="product-info">
-          <span class="badge">Accessories</span>
-          <h3>Cute Accessories</h3>
-          <div class="product-price">12,000 Ks</div>
-          <div class="product-stock in-stock">● In Stock</div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 8 -->
-      <div
-        class="product"
-        data-category="accessory"
-        onclick="openProduct(7)"
-      >
-        <img src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85">
-        <div class="product-info">
-          <span class="badge">Accessories</span>
-          <h3>Simple Jewelry</h3>
-          <div class="product-price">15,000 Ks</div>
-          <div class="product-stock in-stock">● In Stock</div>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="noResult" class="no-result">
-      <h3>😔 No products found</h3>
-      <p>Please try another search or category.</p>
-    </div>
-
-    <section id="about" class="about">
-      <h2>About Here For You</h2>
-      <p>
-        Welcome to Here For You 💗
-        We choose cute, useful and affordable products for you.
-        New products will be added regularly.
-      </p>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <p>If you want to order or ask about a product, please contact us.</p>
-
-      <div class="contact-buttons">
-        <a
-          class="contact-btn"
-          href="tel:+959974439104">
-          📞 Call Now
-        </a>
-
-        <a
-          class="contact-btn"
-          href="viber://chat?number=%2B959974439104">
-          💬 Order on Viber
-        </a>
-      </div>
-    </section>
-
-  </div>
-</section>
-
-<footer>
-  © 2026 Here For You. All Rights Reserved.
-</footer>
+<div class="container" id="home">
 
 
-<!-- PRODUCT DETAIL MODAL -->
+<!-- SEARCH -->
 
-<div
-  id="productModal"
-  class="modal"
-  onclick="closeOutside(event)"
->
+<div class="search-box">
 
-  <div class="modal-box">
-
-    <button
-      class="close"
-      onclick="closeProduct()">
-      ×
-    </button>
-
-    <img
-      id="modalImage"
-      class="modal-image"
-      src=""
-      alt="Product"
-    >
-
-    <div class="modal-content">
-
-      <span id="modalCategory" class="badge"></span>
-
-      <h2 id="modalTitle"></h2>
-
-      <div
-        id="modalPrice"
-        class="product-price">
-      </div>
-
-      <p
-        id="modalDescription"
-        class="modal-description">
-      </p>
-
-      <!-- COLOR -->
-      <div class="detail-row">
-
-        <label>🎨 Color</label>
-
-        <select id="colorSelect">
-        </select>
-
-      </div>
-
-      <!-- SIZE -->
-      <div class="detail-row">
-
-        <label>📏 Size</label>
-
-        <select id="sizeSelect">
-        </select>
-
-      </div>
-
-      <!-- MODEL -->
-      <div class="detail-row">
-
-        <label>🔧 Model</label>
-
-        <select id="modelSelect">
-        </select>
-
-      </div>
-
-      <!-- STOCK -->
-      <div
-        id="stockText"
-        class="stock-text">
-      </div>
-
-      <!-- QUANTITY -->
-      <div class="detail-row">
-
-        <label>📦 Quantity</label>
-
-        <input
-          id="quantityInput"
-          class="quantity-input"
-          type="number"
-          value="1"
-          min="1"
-          onchange="updateOrderSummary()"
-          oninput="updateOrderSummary()"
-        >
-
-      </div>
-
-      <div
-        id="orderSummary"
-        class="order-summary">
-      </div>
-
-      <button
-        id="orderButton"
-        class="order-btn"
-        onclick="orderProduct()">
-        💬 Order Now via Viber
-      </button>
-
-    </div>
-
-  </div>
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔎 Search product, color, size, model..."
+    oninput="searchProducts()"
+  >
 
 </div>
 
 
-<script>
-
-/* =========================
-   PRODUCT DATA
-========================= */
-
-const products = [
-
-  {
-    title: "Fashion Watch",
-    category: "Watches",
-    price: 25000,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
-    description: "Cute and stylish fashion watch for everyday use.",
-    colors: ["Pink", "Black", "Silver"],
-    sizes: ["Adjustable"],
-    models: ["A01", "A02"],
-    stock: 5
-  },
-
-  {
-    title: "Classic Watch",
-    category: "Watches",
-    price: 30000,
-    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85",
-    description: "Simple classic design suitable for daily wear.",
-    colors: ["Black", "Brown", "Silver"],
-    sizes: ["Adjustable"],
-    models: ["C01", "C02"],
-    stock: 8
-  },
-
-  {
-    title: "Mini Portable Fan",
-    category: "Mini Fans",
-    price: 18000,
-    image: "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85",
-    description: "Small portable fan that is easy to carry outdoors.",
-    colors: ["White", "Pink", "Blue"],
-    sizes: ["Mini"],
-    models: ["F01", "F02"],
-    stock: 10
-  },
-
-  {
-    title: "Portable Cooling Fan",
-    category: "Mini Fans",
-    price: 22000,
-    image: "https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85",
-    description: "Portable cooling fan for home, office and outdoor use.",
-    colors: ["White", "Pink", "Green"],
-    sizes: ["Small", "Medium"],
-    models: ["PF01", "PF02"],
-    stock: 6
-  },
-
-  {
-    title: "Everyday Fashion",
-    category: "Fashion",
-    price: 35000,
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85",
-    description: "Simple and comfortable fashion item for everyday wear.",
-    colors: ["Black", "White", "Pink"],
-    sizes: ["S", "M", "L", "XL"],
-    models: ["FD01"],
-    stock: 7
-  },
-
-  {
-    title: "Everyday Bag",
-    category: "Bags",
-    price: 28000,
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85",
-    description: "Practical everyday bag with a cute simple design.",
-    colors: ["Black", "Brown", "Beige"],
-    sizes: ["Standard"],
-    models: ["B01", "B02"],
-    stock: 4
-  },
-
-  {
-    title: "Cute Accessories",
-    category: "Accessories",
-    price: 12000,
-    image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85",
-    description: "Cute accessories that can complete your everyday style.",
-    colors: ["Gold", "Silver", "Rose Gold"],
-    sizes: ["Standard"],
-    models: ["AC01", "AC02"],
-    stock: 12
-  },
-
-  {
-    title: "Simple Jewelry",
-    category: "Accessories",
-    price: 15000,
-    image: "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85",
-    description: "Simple and elegant jewelry for everyday outfits.",
-    colors: ["Gold", "Silver"],
-    sizes: ["Standard"],
-    models: ["J01", "J02"],
-    stock: 9
-  }
+<!-- CATEGORY BUTTONS -->
 
-];
+<div class="categories">
 
+  <button
+    class="category-btn active"
+    onclick="filterProducts('all',this)"
+  >
+    All
+  </button>
 
-/* =========================
-   CATEGORY FILTER
-========================= */
+  <button
+    class="category-btn"
+    onclick="filterProducts('watch',this)"
+  >
+    ⌚ Watches
+  </button>
 
-let currentCategory = "all";
+  <button
+    class="category-btn"
+    onclick="filterProducts('fan',this)"
+  >
+    🌬️ Mini Fans
+  </button>
 
-function filterProducts(category, button){
+  <button
+    class="category-btn"
+    onclick="filterProducts('fashion',this)"
+  >
+    👗 Fashion
+  </button>
 
-  currentCategory = category;
+  <button
+    class="category-btn"
+    onclick="filterProducts('bag',this)"
+  >
+    👜 Bags
+  </button>
 
-  document
-    .querySelectorAll(".category-btn")
-    .forEach(btn => {
-      btn.classList.remove("active");
-    });
+  <button
+    class="category-btn"
+    onclick="filterProducts('accessory',this)"
+  >
+    🎀 Accessories
+  </button>
 
-  button.classList.add("active");
+</div>
 
-  applyFilters();
-}
 
+<!-- PRODUCTS -->
 
-/* =========================
-   SEARCH
-========================= */
+<div id="shop" class="product-grid">
 
-function searchProducts(){
-  applyFilters();
-}
 
+<!-- WATCH 1 -->
 
-/* =========================
-   FILTER + SEARCH
-========================= */
+<div
+  class="product"
+  data-category="watch"
+  onclick="openProduct(0)"
+>
 
-function applyFilters(){
+<img
+src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+>
 
-  const searchInput =
-    document.getElementById("searchInput");
+<div class="product-info">
 
-  const search =
-    searchInput.value
-      .trim()
-      .toLowerCase();
+<span class="badge">Watches</span>
 
-  const cards =
-    document.querySelectorAll(".product");
+<h3>Fashion Watch</h3>
 
-  let found = 0;
+<div class="product-price">
+25,000 Ks
+</div>
 
-  cards.forEach(card => {
+<div class="product-stock in-stock">
+● In Stock
+</div>
 
-    const category =
-      (card.getAttribute("data-category") || "")
-      .trim()
-      .toLowerCase();
+</div>
 
-    const text =
-      card.textContent
-      .toLowerCase();
+</div>
 
-    const categoryMatch =
-      currentCategory === "all" ||
-      category === currentCategory;
 
-    const searchMatch =
-      search === "" ||
-      text.includes(search);
+<!-- WATCH 2 -->
 
-    if(categoryMatch && searchMatch){
+<div
+  class="product"
+  data-category="watch"
+  onclick="openProduct(1)"
+>
 
-      card.style.display = "";
+<img
+src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85"
+>
 
-      found++;
+<div class="product-info">
 
-    }else{
+<span class="badge">Watches</span>
 
-      card.style.display = "none";
+<h3>Classic Watch</h3>
 
-    }
+<div class="product-price">
+30,000 Ks
+</div>
 
-  });
+<div class="product-stock in-stock">
+● In Stock
+</div>
 
-  const noResult =
-    document.getElementById("noResult");
+</div>
 
-  if(found === 0){
+</div>
 
-    noResult.style.display = "block";
 
-  }else{
+<!-- FAN 1 -->
 
-    noResult.style.display = "none";
+<div
+  class="product"
+  data-category="fan"
+  onclick="openProduct(2)"
+>
 
-  }
+<img
+src="https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85"
+>
 
-}
+<div class="product-info">
 
+<span class="badge">Mini Fans</span>
 
-/* =========================
-   OPEN PRODUCT
-========================= */
+<h3>Mini Portable Fan</h3>
 
-let selectedProduct = null;
+<div class="product-price">
+18,000 Ks
+</div>
 
-function openProduct(index){
+<div class="product-stock in-stock">
+● In Stock
+</div>
 
-  selectedProduct = products[index];
+</div>
 
-  const product = selectedProduct;
+</div>
 
-  document.getElementById("modalImage").src =
-    product.image;
 
-  document.getElementById("modalCategory").textContent =
-    product.category;
+<!-- FAN 2 -->
 
-  document.getElementById("modalTitle").textContent =
-    product.title;
+<div
+  class="product"
+  data-category="fan"
+  onclick="openProduct(3)"
+>
 
-  document.getElementById("modalPrice").textContent =
-    product.price.toLocaleString() + " Ks";
+<img
+src="https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85"
+>
 
-  document.getElementById("modalDescription").textContent =
-    product.description;
+<div class="product-info">
 
+<span class="badge">Mini Fans</span>
 
-  fillSelect(
-    "colorSelect",
-    product.colors
-  );
+<h3>Portable Cooling Fan</h3>
 
-  fillSelect(
-    "sizeSelect",
-    product.sizes
-  );
+<div class="product-price">
+22,000 Ks
+</div>
 
-  fillSelect(
-    "modelSelect",
-    product.models
-  );
+<div class="product-stock in-stock">
+● In Stock
+</div>
 
+</div>
 
-  const quantity =
-    document.getElementById("quantityInput");
+</div>
 
-  quantity.value = 1;
 
-  quantity.max = product.stock;
+<!-- FASHION -->
 
+<div
+  class="product"
+  data-category="fashion"
+  onclick="openProduct(4)"
+>
 
-  updateStockText();
+<img
+src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+>
 
-  updateOrderSummary();
+<div class="product-info">
 
+<span class="badge">Fashion</span>
 
-  document.getElementById("productModal")
-    .style.display = "block";
+<h3>Everyday Fashion</h3>
 
-  document.body.style.overflow = "hidden";
-}
+<div class="product-price">
+35,000 Ks
+</div>
 
+<div class="product-stock in-stock">
+● In Stock
+</div>
 
-/* =========================
-   SELECT OPTIONS
-========================= */
+</div>
 
-function fillSelect(id, values){
+</div>
 
-  const select =
-    document.getElementById(id);
 
-  select.innerHTML = "";
+<!-- BAG -->
 
-  values.forEach(value => {
+<div
+  class="product"
+  data-category="bag"
+  onclick="openProduct(5)"
+>
 
-    const option =
-      document.createElement("option");
+<img
+src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+>
 
-    option.value = value;
+<div class="product-info">
 
-    option.textContent = value;
+<span class="badge">Bags</span>
 
-    select.appendChild(option);
+<h3>Everyday Bag</h3>
 
-  });
+<div class="product-price">
+28,000 Ks
+</div>
 
-}
+<div class="product-stock in-stock">
+● In Stock
+</div>
 
+</div>
 
-/* =========================
-   STOCK
-========================= */
+</div>
 
-function updateStockText(){
 
-  if(!selectedProduct) return;
+<!-- ACCESSORY -->
 
-  const stock =
-    selectedProduct.stock;
-
-  const stockText =
-    document.getElementById("stockText");
-
-  const orderButton =
-    document.getElementById("orderButton");
-
-  if(stock > 0){
-
-    stockText.innerHTML =
-      "🟢 Available Stock: <b>" +
-      stock +
-      "</b>";
-
-    orderButton.disabled = false;
-    orderButton.style.opacity = "1";
-
-  }else{
-
-    stockText.innerHTML =
-      "🔴 Out of Stock";
-
-    orderButton.disabled = true;
-    orderButton.style.opacity = ".5";
-
-  }
-
-}
-
-
-/* =========================
-   ORDER SUMMARY
-========================= */
-
-function updateOrderSummary(){
-
-  if(!selectedProduct) return;
-
-  const quantityInput =
-    document.getElementById("quantityInput");
-
-  let quantity =
-    parseInt(quantityInput.value) || 1;
-
-  if(quantity < 1){
-    quantity = 1;
-    quantityInput.value = 1;
-  }
-
-  if(quantity > selectedProduct.stock){
-
-    quantity =
-      selectedProduct.stock;
-
-    quantityInput.value =
-      selectedProduct.stock;
-
-  }
-
-  const color =
-    document.getElementById("colorSelect").value;
-
-  const size =
-    document.getElementById("sizeSelect").value;
-
-  const model =
-    document.getElementById("modelSelect").value;
-
-  const total =
-    selectedProduct.price * quantity;
-
-
-  document.getElementById("orderSummary").innerHTML =
-
-    "<b>🛍️ Your Order</b><br>" +
-
-    "Product: " +
-    selectedProduct.title +
-    "<br>" +
-
-    "Color: " +
-    color +
-    "<br>" +
-
-    "Size: " +
-    size +
-    "<br>" +
-
-    "Model: " +
-    model +
-    "<br>" +
-
-    "Quantity: " +
-    quantity +
-    "<br>" +
-
-    "Total: <b>" +
-    total.toLocaleString() +
-    " Ks</b>";
-
-}
-
-
-/* =========================
-   ORDER VIA VIBER
-========================= */
-
-function orderProduct(){
-
-  if(!selectedProduct) return;
-
-  const color =
-    document.getElementById("colorSelect").value;
-
-  const size =
-    document.getElementById("sizeSelect").value;
-
-  const model =
-    document.getElementById("modelSelect").value;
-
-  const quantity =
-    document.getElementById("quantityInput").value;
-
-  const total =
-    selectedProduct.price *
-    parseInt(quantity);
-
-
-  const message =
-    "Hello Here For You 💗%0A%0A" +
-
-    "I would like to order:%0A" +
-
-    "Product: " +
-    selectedProduct.title +
-    "%0A" +
-
-    "Color: " +
-    color +
-    "%0A" +
-
-    "Size: " +
-    size +
-    "%0A" +
-
-    "Model: " +
-    model +
-    "%0A" +
-
-    "Quantity: " +
-    quantity +
-    "%0A" +
-
-    "Total: " +
-    total.toLocaleString() +
-    " Ks%0A%0A" +
-
-    "Please confirm my order. Thank you 💗";
-
-
-  const viberNumber =
-    "viber://chat?number=%2B959974439104&text=" +
-    message;
-
-  window.location.href =
-    viberNumber;
-
-}
-
-
-/* =========================
-   CLOSE MODAL
-========================= */
-
-function closeProduct(){
-
-  document.getElementById("productModal")
-    .style.display = "none";
-
-  document.body.style.overflow = "";
-
-}
-
-
-function closeOutside(event){
-
-  if(event.target.id === "productModal"){
-
-    closeProduct();
-
-  }
-
-}
-
-
-document.addEventListener(
-  "keydown",
-  function(event){
-
-    if(event.key === "Escape"){
-
-      closeProduct();
-
-    }
-
-  }
-);
-
-
-/* =========================
-   INITIAL FILTER
-========================= */
-
-applyFilters();
-
-</script>
-
-</body>
-</html>
+<div
+  class="product"
+  data-category="accessory"
+  onclick="openProduct(
