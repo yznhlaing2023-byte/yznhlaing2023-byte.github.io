@@ -1,306 +1,402 @@
 <!DOCTYPE html>
-<html lang="my">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Here For You | Online Shop</title>
+<meta name="description" content="Here For You - Watches, Mini Fans, Fashion, Bags and Accessories.">
+<meta name="keywords" content="watches, mini fans, fashion, bags, accessories, Myanmar online shop">
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, "Myanmar Text", sans-serif;
-    background: #fff8fb;
-    color: #333;
+body{
+  font-family:Arial, sans-serif;
+  background:#fff8fb;
+  color:#3d3036;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #f8c8dc, #fff0f6);
-    padding: 35px 20px;
-    text-align: center;
+header{
+  background:linear-gradient(135deg,#f7dce7,#fff7fa);
+  padding:45px 20px 35px;
+  text-align:center;
 }
 
-header h1 {
-    margin: 0;
-    color: #b94f78;
-    font-size: 34px;
+header h1{
+  font-size:42px;
+  color:#6f4055;
+  margin-bottom:8px;
 }
 
-header p {
-    margin: 8px 0 0;
-    color: #777;
+header p{
+  color:#805d6d;
+  font-size:16px;
 }
 
-/* NAV */
-nav {
-    background: white;
-    padding: 14px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:white;
+  border-bottom:1px solid #f0dce5;
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  padding:15px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #555;
-    margin: 0 12px;
-    font-weight: bold;
+nav a{
+  text-decoration:none;
+  color:#624653;
+  font-weight:bold;
 }
 
-/* MAIN */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 15px;
+nav a:hover{
+  color:#c56d91;
 }
 
-/* SEARCH */
-.search-box {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:25px 18px;
 }
 
-.search-box input {
-    width: 100%;
-    max-width: 550px;
-    padding: 14px 18px;
-    border: 1px solid #e7bfd0;
-    border-radius: 30px;
-    outline: none;
-    font-size: 16px;
+.search-box{
+  margin:10px auto 22px;
+  max-width:650px;
 }
 
-/* CATEGORY */
-.categories {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+.search-box input{
+  width:100%;
+  padding:15px 18px;
+  border:1px solid #e8cbd7;
+  border-radius:30px;
+  outline:none;
+  font-size:16px;
+  background:white;
 }
 
-.category-btn {
-    border: 1px solid #e5b8cb;
-    background: white;
-    color: #9c486b;
-    padding: 10px 16px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
+.search-box input:focus{
+  border-color:#c9789b;
+  box-shadow:0 0 0 3px #f8e6ee;
 }
 
-.category-btn.active,
-.category-btn:hover {
-    background: #d979a0;
-    color: white;
+.categories{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:28px;
 }
 
-/* PRODUCTS */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 20px;
+.category-btn{
+  border:1px solid #e4c5d2;
+  background:white;
+  color:#654652;
+  padding:10px 17px;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:14px;
 }
 
-.product-card {
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    cursor: pointer;
-    transition: 0.25s;
+.category-btn:hover,
+.category-btn.active{
+  background:#b96889;
+  color:white;
+  border-color:#b96889;
 }
 
-.product-card:hover {
-    transform: translateY(-4px);
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
 }
 
-.product-card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    display: block;
+.product{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 5px 18px rgba(100,50,70,.08);
+  transition:.25s;
+  cursor:pointer;
 }
 
-.product-info {
-    padding: 15px;
+.product:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(100,50,70,.13);
 }
 
-.product-info h3 {
-    margin: 0 0 8px;
-    color: #555;
+.product img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  display:block;
 }
 
-.price {
-    color: #c4567f;
-    font-weight: bold;
-    font-size: 18px;
+.product-info{
+  padding:15px;
 }
 
-.stock {
-    color: #777;
-    margin-top: 5px;
-    font-size: 14px;
+.product-info h3{
+  color:#583b47;
+  margin-bottom:8px;
+}
+
+.product-price{
+  color:#b45f80;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.product-stock{
+  font-size:13px;
+  margin-top:7px;
+}
+
+.in-stock{
+  color:#31834b;
+}
+
+.out-stock{
+  color:#c33e4e;
+}
+
+.no-result{
+  display:none;
+  text-align:center;
+  padding:50px 10px;
+  color:#8a6b77;
+}
+
+.about,
+.contact{
+  background:white;
+  margin-top:45px;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 5px 18px rgba(100,50,70,.06);
+}
+
+.about h2,
+.contact h2{
+  color:#704257;
+  margin-bottom:12px;
+}
+
+.contact-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:20px;
+}
+
+.contact-btn{
+  text-decoration:none;
+  padding:12px 20px;
+  border-radius:25px;
+  background:#b96889;
+  color:white;
+  font-weight:bold;
+}
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  margin-top:40px;
+  background:#f4dce6;
+  color:#704257;
 }
 
 /* MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(35,20,27,.6);
+  z-index:100;
+  padding:20px;
+  overflow-y:auto;
 }
 
-.modal.show {
-    display: flex;
+.modal-box{
+  background:white;
+  max-width:850px;
+  margin:30px auto;
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
 }
 
-.modal-content {
-    background: white;
-    width: 100%;
-    max-width: 600px;
-    max-height: 92vh;
-    overflow-y: auto;
-    border-radius: 20px;
-    padding: 20px;
-    position: relative;
+.close{
+  position:absolute;
+  right:15px;
+  top:10px;
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:#f4dce6;
+  color:#6f4055;
+  font-size:25px;
+  cursor:pointer;
+  z-index:5;
 }
 
-.close {
-    position: absolute;
-    right: 18px;
-    top: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    color: #888;
+.modal-image{
+  width:100%;
+  height:100%;
+  min-height:430px;
+  object-fit:cover;
 }
 
-.detail-image {
-    width: 100%;
-    max-height: 350px;
-    object-fit: contain;
-    border-radius: 15px;
-    background: #fafafa;
+.modal-content{
+  padding:35px 28px;
 }
 
-.detail-title {
-    color: #b94f78;
-    margin-bottom: 5px;
+.modal-content h2{
+  color:#613d4c;
+  margin-bottom:8px;
 }
 
-.detail-price {
-    font-size: 22px;
-    font-weight: bold;
-    color: #c4567f;
-    margin: 10px 0;
+.modal-description{
+  color:#725f66;
+  line-height:1.6;
+  margin:15px 0;
 }
 
-.detail-description {
-    color: #666;
-    line-height: 1.6;
+.detail-row{
+  margin:14px 0;
 }
 
-/* OPTIONS */
-.option-group {
-    margin-top: 15px;
+.detail-row label{
+  display:block;
+  font-weight:bold;
+  color:#5d414d;
+  margin-bottom:7px;
 }
 
-.option-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 6px;
+select,
+.quantity-input{
+  width:100%;
+  padding:12px;
+  border:1px solid #e3c6d1;
+  border-radius:10px;
+  background:white;
+  font-size:15px;
+  outline:none;
 }
 
-.option-group select,
-.option-group input {
-    width: 100%;
-    padding: 11px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 15px;
+.stock-text{
+  margin:10px 0;
+  font-size:14px;
 }
 
-.summary {
-    background: #fff2f7;
-    border-radius: 12px;
-    padding: 15px;
-    margin-top: 18px;
-    line-height: 1.8;
+.order-btn{
+  width:100%;
+  margin-top:15px;
+  padding:14px;
+  border:0;
+  border-radius:30px;
+  background:#b96889;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.viber-btn {
-    width: 100%;
-    border: none;
-    background: #7360f2;
-    color: white;
-    padding: 14px;
-    border-radius: 12px;
-    margin-top: 15px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
+.order-btn:hover{
+  background:#9f506f;
 }
 
-.viber-btn:hover {
-    opacity: 0.9;
+.order-summary{
+  background:#fff5f8;
+  padding:13px;
+  border-radius:12px;
+  margin-top:15px;
+  font-size:14px;
+  line-height:1.7;
 }
 
-/* ABOUT */
-section {
-    margin-top: 45px;
-}
-
-.about-box {
-    background: white;
-    border-radius: 18px;
-    padding: 25px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-}
-
-.contact {
-    line-height: 2;
-}
-
-/* FOOTER */
-footer {
-    margin-top: 50px;
-    background: #f8d7e4;
-    text-align: center;
-    padding: 25px;
-    color: #777;
+.badge{
+  display:inline-block;
+  background:#f4dce6;
+  color:#704257;
+  padding:5px 9px;
+  border-radius:15px;
+  font-size:12px;
+  margin-bottom:8px;
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
 
-    header h1 {
-        font-size: 28px;
-    }
+@media(max-width:900px){
+  .product-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
 
-    nav a {
-        margin: 0 5px;
-        font-size: 14px;
-    }
+@media(max-width:650px){
+  header h1{
+    font-size:34px;
+  }
 
-    .product-card img {
-        height: 200px;
-    }
+  nav{
+    gap:15px;
+    font-size:14px;
+  }
 
-    .modal-content {
-        padding: 15px;
-    }
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:13px;
+  }
+
+  .product img{
+    height:190px;
+  }
+
+  .modal-box{
+    grid-template-columns:1fr;
+    margin:10px auto;
+  }
+
+  .modal-image{
+    min-height:280px;
+    max-height:330px;
+  }
+
+  .modal-content{
+    padding:25px 20px;
+  }
+}
+
+@media(max-width:400px){
+  .product-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .product img{
+    height:165px;
+  }
+
+  .product-info{
+    padding:11px;
+  }
+
+  .product-info h3{
+    font-size:15px;
+  }
+
+  .product-price{
+    font-size:16px;
+  }
 }
 </style>
 </head>
@@ -308,436 +404,868 @@ footer {
 <body>
 
 <header>
-    <h1>Here For You</h1>
-    <p>Cute • Clean • Premium Online Shop</p>
+  <h1>Here For You</h1>
+  <p>Simple • Cute • Useful • For You</p>
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#shop">Shop</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+  <a href="#home">Home</a>
+  <a href="#shop">Shop</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<main class="container" id="home">
+<section id="home">
+  <div class="container">
 
-    <div id="shop">
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔎 Search products..."
+        oninput="searchProducts()"
+      >
+    </div>
 
-        <!-- SEARCH -->
-        <div class="search-box">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="🔍 ပစ္စည်းရှာရန်..."
-            >
-        </div>
+    <div class="categories">
 
-        <!-- CATEGORY -->
-        <div class="categories">
+      <button
+        class="category-btn active"
+        onclick="filterProducts('all', this)">
+        All
+      </button>
 
-            <button class="category-btn active" data-category="all">
-                ပစ္စည်းအားလုံး
-            </button>
+      <button
+        class="category-btn"
+        onclick="filterProducts('watch', this)">
+        ⌚ Watches
+      </button>
 
-            <button class="category-btn" data-category="watch">
-                ⌚ နာရီ
-            </button>
+      <button
+        class="category-btn"
+        onclick="filterProducts('fan', this)">
+        🌬️ Mini Fans
+      </button>
 
-            <button class="category-btn" data-category="fan">
-                🌬️ ပန်ကာ
-            </button>
+      <button
+        class="category-btn"
+        onclick="filterProducts('fashion', this)">
+        👗 Fashion
+      </button>
 
-            <button class="category-btn" data-category="fashion">
-                👗 အဝတ်အစား
-            </button>
+      <button
+        class="category-btn"
+        onclick="filterProducts('bag', this)">
+        👜 Bags
+      </button>
 
-            <button class="category-btn" data-category="bag">
-                👜 အိတ်
-            </button>
-
-            <button class="category-btn" data-category="accessory">
-                🎀 Accessories
-            </button>
-
-        </div>
-
-        <!-- PRODUCTS -->
-        <div class="products" id="productContainer"></div>
+      <button
+        class="category-btn"
+        onclick="filterProducts('accessory', this)">
+        🎀 Accessories
+      </button>
 
     </div>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="about-box">
-            <h2>About Here For You</h2>
-            <p>
-                Here For You မှာ ချစ်စရာကောင်းပြီး အသုံးဝင်တဲ့
-                Fashion & Lifestyle ပစ္စည်းများကို ရွေးချယ်ဝယ်ယူနိုင်ပါတယ်။
-            </p>
+    <div id="shop" class="product-grid">
+
+      <!-- PRODUCT 1 -->
+      <div
+        class="product"
+        data-category="watch"
+        onclick="openProduct(0)"
+      >
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85">
+        <div class="product-info">
+          <span class="badge">Watches</span>
+          <h3>Fashion Watch</h3>
+          <div class="product-price">25,000 Ks</div>
+          <div class="product-stock in-stock">● In Stock</div>
         </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div
+        class="product"
+        data-category="watch"
+        onclick="openProduct(1)"
+      >
+        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85">
+        <div class="product-info">
+          <span class="badge">Watches</span>
+          <h3>Classic Watch</h3>
+          <div class="product-price">30,000 Ks</div>
+          <div class="product-stock in-stock">● In Stock</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div
+        class="product"
+        data-category="fan"
+        onclick="openProduct(2)"
+      >
+        <img src="https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85">
+        <div class="product-info">
+          <span class="badge">Mini Fans</span>
+          <h3>Mini Portable Fan</h3>
+          <div class="product-price">18,000 Ks</div>
+          <div class="product-stock in-stock">● In Stock</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 4 -->
+      <div
+        class="product"
+        data-category="fan"
+        onclick="openProduct(3)"
+      >
+        <img src="https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85">
+        <div class="product-info">
+          <span class="badge">Mini Fans</span>
+          <h3>Portable Cooling Fan</h3>
+          <div class="product-price">22,000 Ks</div>
+          <div class="product-stock in-stock">● In Stock</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 5 -->
+      <div
+        class="product"
+        data-category="fashion"
+        onclick="openProduct(4)"
+      >
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85">
+        <div class="product-info">
+          <span class="badge">Fashion</span>
+          <h3>Everyday Fashion</h3>
+          <div class="product-price">35,000 Ks</div>
+          <div class="product-stock in-stock">● In Stock</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 6 -->
+      <div
+        class="product"
+        data-category="bag"
+        onclick="openProduct(5)"
+      >
+        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85">
+        <div class="product-info">
+          <span class="badge">Bags</span>
+          <h3>Everyday Bag</h3>
+          <div class="product-price">28,000 Ks</div>
+          <div class="product-stock in-stock">● In Stock</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 7 -->
+      <div
+        class="product"
+        data-category="accessory"
+        onclick="openProduct(6)"
+      >
+        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85">
+        <div class="product-info">
+          <span class="badge">Accessories</span>
+          <h3>Cute Accessories</h3>
+          <div class="product-price">12,000 Ks</div>
+          <div class="product-stock in-stock">● In Stock</div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 8 -->
+      <div
+        class="product"
+        data-category="accessory"
+        onclick="openProduct(7)"
+      >
+        <img src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85">
+        <div class="product-info">
+          <span class="badge">Accessories</span>
+          <h3>Simple Jewelry</h3>
+          <div class="product-price">15,000 Ks</div>
+          <div class="product-stock in-stock">● In Stock</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="noResult" class="no-result">
+      <h3>😔 No products found</h3>
+      <p>Please try another search or category.</p>
+    </div>
+
+    <section id="about" class="about">
+      <h2>About Here For You</h2>
+      <p>
+        Welcome to Here For You 💗
+        We choose cute, useful and affordable products for you.
+        New products will be added regularly.
+      </p>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="about-box contact">
-            <h2>Contact Us</h2>
-            <p>📞 Phone: 09974439104</p>
-            <p>💜 Viber: 09974439104</p>
-        </div>
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>If you want to order or ask about a product, please contact us.</p>
+
+      <div class="contact-buttons">
+        <a
+          class="contact-btn"
+          href="tel:+959974439104">
+          📞 Call Now
+        </a>
+
+        <a
+          class="contact-btn"
+          href="viber://chat?number=%2B959974439104">
+          💬 Order on Viber
+        </a>
+      </div>
     </section>
 
-</main>
+  </div>
+</section>
+
+<footer>
+  © 2026 Here For You. All Rights Reserved.
+</footer>
 
 
 <!-- PRODUCT DETAIL MODAL -->
-<div class="modal" id="productModal">
+
+<div
+  id="productModal"
+  class="modal"
+  onclick="closeOutside(event)"
+>
+
+  <div class="modal-box">
+
+    <button
+      class="close"
+      onclick="closeProduct()">
+      ×
+    </button>
+
+    <img
+      id="modalImage"
+      class="modal-image"
+      src=""
+      alt="Product"
+    >
 
     <div class="modal-content">
 
-        <span class="close" id="closeModal">&times;</span>
+      <span id="modalCategory" class="badge"></span>
 
-        <img
-            id="detailImage"
-            class="detail-image"
-            src=""
-            alt="Product"
+      <h2 id="modalTitle"></h2>
+
+      <div
+        id="modalPrice"
+        class="product-price">
+      </div>
+
+      <p
+        id="modalDescription"
+        class="modal-description">
+      </p>
+
+      <!-- COLOR -->
+      <div class="detail-row">
+
+        <label>🎨 Color</label>
+
+        <select id="colorSelect">
+        </select>
+
+      </div>
+
+      <!-- SIZE -->
+      <div class="detail-row">
+
+        <label>📏 Size</label>
+
+        <select id="sizeSelect">
+        </select>
+
+      </div>
+
+      <!-- MODEL -->
+      <div class="detail-row">
+
+        <label>🔧 Model</label>
+
+        <select id="modelSelect">
+        </select>
+
+      </div>
+
+      <!-- STOCK -->
+      <div
+        id="stockText"
+        class="stock-text">
+      </div>
+
+      <!-- QUANTITY -->
+      <div class="detail-row">
+
+        <label>📦 Quantity</label>
+
+        <input
+          id="quantityInput"
+          class="quantity-input"
+          type="number"
+          value="1"
+          min="1"
+          onchange="updateOrderSummary()"
+          oninput="updateOrderSummary()"
         >
 
-        <h2 id="detailTitle" class="detail-title"></h2>
+      </div>
 
-        <div id="detailPrice" class="detail-price"></div>
+      <div
+        id="orderSummary"
+        class="order-summary">
+      </div>
 
-        <p id="detailDescription" class="detail-description"></p>
-
-        <!-- COLOR -->
-        <div class="option-group">
-            <label>Color</label>
-            <select id="colorSelect"></select>
-        </div>
-
-        <!-- SIZE -->
-        <div class="option-group">
-            <label>Size</label>
-            <select id="sizeSelect"></select>
-        </div>
-
-        <!-- MODEL -->
-        <div class="option-group">
-            <label>Model</label>
-            <select id="modelSelect"></select>
-        </div>
-
-        <!-- QUANTITY -->
-        <div class="option-group">
-            <label>Quantity</label>
-            <input
-                type="number"
-                id="quantityInput"
-                min="1"
-                value="1"
-            >
-        </div>
-
-        <!-- SUMMARY -->
-        <div class="summary">
-
-            <div>
-                Stock:
-                <strong id="stockText"></strong>
-            </div>
-
-            <div>
-                Total:
-                <strong id="totalPrice"></strong>
-            </div>
-
-        </div>
-
-        <button class="viber-btn" id="viberOrderBtn">
-            💜 Viber မှ Order မှာမယ်
-        </button>
+      <button
+        id="orderButton"
+        class="order-btn"
+        onclick="orderProduct()">
+        💬 Order Now via Viber
+      </button>
 
     </div>
+
+  </div>
 
 </div>
 
 
-<footer>
-    © 2026 Here For You. All Rights Reserved.
-</footer>
-
-
 <script>
 
-/* ==============================
+/* =========================
    PRODUCT DATA
-================================ */
+========================= */
 
 const products = [
 
-    {
-        name: "Fashion Watch",
-        category: "watch",
-        price: 25000,
-        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
-        description: "လှပပြီး နေ့စဉ်ဝတ်ဆင်နိုင်သော Fashion Watch",
-        colors: ["Pink", "Black", "Silver"],
-        sizes: ["Adjustable"],
-        models: ["A01", "A02"],
-        stock: 5
-    },
+  {
+    title: "Fashion Watch",
+    category: "Watches",
+    price: 25000,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
+    description: "Cute and stylish fashion watch for everyday use.",
+    colors: ["Pink", "Black", "Silver"],
+    sizes: ["Adjustable"],
+    models: ["A01", "A02"],
+    stock: 5
+  },
 
-    {
-        name: "Classic Watch",
-        category: "watch",
-        price: 30000,
-        image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85",
-        description: "Classic Style နာရီ",
-        colors: ["Black", "Brown", "Silver"],
-        sizes: ["Adjustable"],
-        models: ["C01", "C02"],
-        stock: 8
-    },
+  {
+    title: "Classic Watch",
+    category: "Watches",
+    price: 30000,
+    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85",
+    description: "Simple classic design suitable for daily wear.",
+    colors: ["Black", "Brown", "Silver"],
+    sizes: ["Adjustable"],
+    models: ["C01", "C02"],
+    stock: 8
+  },
 
-    {
-        name: "Mini Portable Fan",
-        category: "fan",
-        price: 18000,
-        image: "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85",
-        description: "အပြင်သွားရာတွင် သယ်ဆောင်ရလွယ်သော Mini Fan",
-        colors: ["White", "Pink", "Blue"],
-        sizes: ["Mini"],
-        models: ["F01", "F02"],
-        stock: 10
-    },
+  {
+    title: "Mini Portable Fan",
+    category: "Mini Fans",
+    price: 18000,
+    image: "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85",
+    description: "Small portable fan that is easy to carry outdoors.",
+    colors: ["White", "Pink", "Blue"],
+    sizes: ["Mini"],
+    models: ["F01", "F02"],
+    stock: 10
+  },
 
-    {
-        name: "Portable Cooling Fan",
-        category: "fan",
-        price: 22000,
-        image: "https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85",
-        description: "အေးမြစွာ အသုံးပြုနိုင်သော Portable Fan",
-        colors: ["White", "Pink", "Green"],
-        sizes: ["Small", "Medium"],
-        models: ["PF01", "PF02"],
-        stock: 10
-    },
+  {
+    title: "Portable Cooling Fan",
+    category: "Mini Fans",
+    price: 22000,
+    image: "https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85",
+    description: "Portable cooling fan for home, office and outdoor use.",
+    colors: ["White", "Pink", "Green"],
+    sizes: ["Small", "Medium"],
+    models: ["PF01", "PF02"],
+    stock: 6
+  },
 
-    {
-        name: "Everyday Fashion",
-        category: "fashion",
-        price: 35000,
-        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85",
-        description: "နေ့စဉ်ဝတ်ဆင်ရန် သင့်တော်သော Fashion Item",
-        colors: ["Black", "White", "Pink"],
-        sizes: ["S", "M", "L", "XL"],
-        models: ["FD01"],
-        stock: 10
-    },
+  {
+    title: "Everyday Fashion",
+    category: "Fashion",
+    price: 35000,
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85",
+    description: "Simple and comfortable fashion item for everyday wear.",
+    colors: ["Black", "White", "Pink"],
+    sizes: ["S", "M", "L", "XL"],
+    models: ["FD01"],
+    stock: 7
+  },
 
-    {
-        name: "Everyday Bag",
-        category: "bag",
-        price: 28000,
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85",
-        description: "နေ့စဉ်အသုံးပြုရန် သင့်တော်သော Bag",
-        colors: ["Black", "Brown", "Beige"],
-        sizes: ["Standard"],
-        models: ["B01", "B02"],
-        stock: 4
-    },
+  {
+    title: "Everyday Bag",
+    category: "Bags",
+    price: 28000,
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85",
+    description: "Practical everyday bag with a cute simple design.",
+    colors: ["Black", "Brown", "Beige"],
+    sizes: ["Standard"],
+    models: ["B01", "B02"],
+    stock: 4
+  },
 
-    {
-        name: "Cute Accessories",
-        category: "accessory",
-        price: 12000,
-        image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85",
-        description: "ချစ်စရာ Accessories",
-        colors: ["Gold", "Silver", "Rose Gold"],
-        sizes: ["Standard"],
-        models: ["AC01", "AC02"],
-        stock: 12
-    },
+  {
+    title: "Cute Accessories",
+    category: "Accessories",
+    price: 12000,
+    image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85",
+    description: "Cute accessories that can complete your everyday style.",
+    colors: ["Gold", "Silver", "Rose Gold"],
+    sizes: ["Standard"],
+    models: ["AC01", "AC02"],
+    stock: 12
+  },
 
-    {
-        name: "Simple Jewelry",
-        category: "accessory",
-        price: 15000,
-        image: "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85",
-        description: "ရိုးရှင်းလှပသော Jewelry",
-        colors: ["Gold", "Silver"],
-        sizes: ["Standard"],
-        models: ["J01", "J02"],
-        stock: 9
-    }
+  {
+    title: "Simple Jewelry",
+    category: "Accessories",
+    price: 15000,
+    image: "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85",
+    description: "Simple and elegant jewelry for everyday outfits.",
+    colors: ["Gold", "Silver"],
+    sizes: ["Standard"],
+    models: ["J01", "J02"],
+    stock: 9
+  }
 
 ];
 
 
-/* ==============================
-   VARIABLES
-================================ */
+/* =========================
+   CATEGORY FILTER
+========================= */
 
-let currentProduct = null;
 let currentCategory = "all";
 
+function filterProducts(category, button){
 
-const productContainer =
-    document.getElementById("productContainer");
+  currentCategory = category;
 
-const searchInput =
-    document.getElementById("searchInput");
-
-const productModal =
-    document.getElementById("productModal");
-
-const closeModal =
-    document.getElementById("closeModal");
-
-const detailImage =
-    document.getElementById("detailImage");
-
-const detailTitle =
-    document.getElementById("detailTitle");
-
-const detailPrice =
-    document.getElementById("detailPrice");
-
-const detailDescription =
-    document.getElementById("detailDescription");
-
-const colorSelect =
-    document.getElementById("colorSelect");
-
-const sizeSelect =
-    document.getElementById("sizeSelect");
-
-const modelSelect =
-    document.getElementById("modelSelect");
-
-const quantityInput =
-    document.getElementById("quantityInput");
-
-const stockText =
-    document.getElementById("stockText");
-
-const totalPrice =
-    document.getElementById("totalPrice");
-
-const viberOrderBtn =
-    document.getElementById("viberOrderBtn");
-
-
-/* ==============================
-   SHOW PRODUCTS
-================================ */
-
-function showProducts() {
-
-    productContainer.innerHTML = "";
-
-    products.forEach(function(product, index) {
-
-        const card = document.createElement("div");
-
-        card.className = "product-card";
-
-        card.dataset.index = index;
-        card.dataset.category = product.category;
-
-        card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            
-            <div class="product-info">
-                <h3>${product.name}</h3>
-
-                <div class="price">
-                    ${product.price.toLocaleString()} Ks
-                </div>
-
-                <div class="stock">
-                    Stock: ${product.stock}
-                </div>
-            </div>
-        `;
-
-        /*
-         IMPORTANT:
-         Card ကိုနှိပ်တဲ့အခါ
-         အဲ့ဒီ Card ရဲ့ index ကိုပဲ
-         openProduct() ထဲပို့မယ်
-        */
-
-        card.addEventListener("click", function() {
-
-            const index =
-                Number(this.dataset.index);
-
-            openProduct(index);
-
-        });
-
-        productContainer.appendChild(card);
-
+  document
+    .querySelectorAll(".category-btn")
+    .forEach(btn => {
+      btn.classList.remove("active");
     });
 
-    applyFilters();
+  button.classList.add("active");
+
+  applyFilters();
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function searchProducts(){
+  applyFilters();
+}
+
+
+/* =========================
+   FILTER + SEARCH
+========================= */
+
+function applyFilters(){
+
+  const searchInput =
+    document.getElementById("searchInput");
+
+  const search =
+    searchInput.value
+      .trim()
+      .toLowerCase();
+
+  const cards =
+    document.querySelectorAll(".product");
+
+  let found = 0;
+
+  cards.forEach(card => {
+
+    const category =
+      (card.getAttribute("data-category") || "")
+      .trim()
+      .toLowerCase();
+
+    const text =
+      card.textContent
+      .toLowerCase();
+
+    const categoryMatch =
+      currentCategory === "all" ||
+      category === currentCategory;
+
+    const searchMatch =
+      search === "" ||
+      text.includes(search);
+
+    if(categoryMatch && searchMatch){
+
+      card.style.display = "";
+
+      found++;
+
+    }else{
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+  const noResult =
+    document.getElementById("noResult");
+
+  if(found === 0){
+
+    noResult.style.display = "block";
+
+  }else{
+
+    noResult.style.display = "none";
+
+  }
 
 }
 
 
-/* ==============================
-   OPEN PRODUCT DETAIL
-================================ */
+/* =========================
+   OPEN PRODUCT
+========================= */
 
-function openProduct(index) {
+let selectedProduct = null;
 
-    const product = products[index];
+function openProduct(index){
 
-    if (!product) {
-        return;
+  selectedProduct = products[index];
+
+  const product = selectedProduct;
+
+  document.getElementById("modalImage").src =
+    product.image;
+
+  document.getElementById("modalCategory").textContent =
+    product.category;
+
+  document.getElementById("modalTitle").textContent =
+    product.title;
+
+  document.getElementById("modalPrice").textContent =
+    product.price.toLocaleString() + " Ks";
+
+  document.getElementById("modalDescription").textContent =
+    product.description;
+
+
+  fillSelect(
+    "colorSelect",
+    product.colors
+  );
+
+  fillSelect(
+    "sizeSelect",
+    product.sizes
+  );
+
+  fillSelect(
+    "modelSelect",
+    product.models
+  );
+
+
+  const quantity =
+    document.getElementById("quantityInput");
+
+  quantity.value = 1;
+
+  quantity.max = product.stock;
+
+
+  updateStockText();
+
+  updateOrderSummary();
+
+
+  document.getElementById("productModal")
+    .style.display = "block";
+
+  document.body.style.overflow = "hidden";
+}
+
+
+/* =========================
+   SELECT OPTIONS
+========================= */
+
+function fillSelect(id, values){
+
+  const select =
+    document.getElementById(id);
+
+  select.innerHTML = "";
+
+  values.forEach(value => {
+
+    const option =
+      document.createElement("option");
+
+    option.value = value;
+
+    option.textContent = value;
+
+    select.appendChild(option);
+
+  });
+
+}
+
+
+/* =========================
+   STOCK
+========================= */
+
+function updateStockText(){
+
+  if(!selectedProduct) return;
+
+  const stock =
+    selectedProduct.stock;
+
+  const stockText =
+    document.getElementById("stockText");
+
+  const orderButton =
+    document.getElementById("orderButton");
+
+  if(stock > 0){
+
+    stockText.innerHTML =
+      "🟢 Available Stock: <b>" +
+      stock +
+      "</b>";
+
+    orderButton.disabled = false;
+    orderButton.style.opacity = "1";
+
+  }else{
+
+    stockText.innerHTML =
+      "🔴 Out of Stock";
+
+    orderButton.disabled = true;
+    orderButton.style.opacity = ".5";
+
+  }
+
+}
+
+
+/* =========================
+   ORDER SUMMARY
+========================= */
+
+function updateOrderSummary(){
+
+  if(!selectedProduct) return;
+
+  const quantityInput =
+    document.getElementById("quantityInput");
+
+  let quantity =
+    parseInt(quantityInput.value) || 1;
+
+  if(quantity < 1){
+    quantity = 1;
+    quantityInput.value = 1;
+  }
+
+  if(quantity > selectedProduct.stock){
+
+    quantity =
+      selectedProduct.stock;
+
+    quantityInput.value =
+      selectedProduct.stock;
+
+  }
+
+  const color =
+    document.getElementById("colorSelect").value;
+
+  const size =
+    document.getElementById("sizeSelect").value;
+
+  const model =
+    document.getElementById("modelSelect").value;
+
+  const total =
+    selectedProduct.price * quantity;
+
+
+  document.getElementById("orderSummary").innerHTML =
+
+    "<b>🛍️ Your Order</b><br>" +
+
+    "Product: " +
+    selectedProduct.title +
+    "<br>" +
+
+    "Color: " +
+    color +
+    "<br>" +
+
+    "Size: " +
+    size +
+    "<br>" +
+
+    "Model: " +
+    model +
+    "<br>" +
+
+    "Quantity: " +
+    quantity +
+    "<br>" +
+
+    "Total: <b>" +
+    total.toLocaleString() +
+    " Ks</b>";
+
+}
+
+
+/* =========================
+   ORDER VIA VIBER
+========================= */
+
+function orderProduct(){
+
+  if(!selectedProduct) return;
+
+  const color =
+    document.getElementById("colorSelect").value;
+
+  const size =
+    document.getElementById("sizeSelect").value;
+
+  const model =
+    document.getElementById("modelSelect").value;
+
+  const quantity =
+    document.getElementById("quantityInput").value;
+
+  const total =
+    selectedProduct.price *
+    parseInt(quantity);
+
+
+  const message =
+    "Hello Here For You 💗%0A%0A" +
+
+    "I would like to order:%0A" +
+
+    "Product: " +
+    selectedProduct.title +
+    "%0A" +
+
+    "Color: " +
+    color +
+    "%0A" +
+
+    "Size: " +
+    size +
+    "%0A" +
+
+    "Model: " +
+    model +
+    "%0A" +
+
+    "Quantity: " +
+    quantity +
+    "%0A" +
+
+    "Total: " +
+    total.toLocaleString() +
+    " Ks%0A%0A" +
+
+    "Please confirm my order. Thank you 💗";
+
+
+  const viberNumber =
+    "viber://chat?number=%2B959974439104&text=" +
+    message;
+
+  window.location.href =
+    viberNumber;
+
+}
+
+
+/* =========================
+   CLOSE MODAL
+========================= */
+
+function closeProduct(){
+
+  document.getElementById("productModal")
+    .style.display = "none";
+
+  document.body.style.overflow = "";
+
+}
+
+
+function closeOutside(event){
+
+  if(event.target.id === "productModal"){
+
+    closeProduct();
+
+  }
+
+}
+
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(event.key === "Escape"){
+
+      closeProduct();
+
     }
 
-    currentProduct = product;
+  }
+);
 
 
-    detailImage.src = product.image;
+/* =========================
+   INITIAL FILTER
+========================= */
 
-    detailImage.alt = product.name;
+applyFilters();
 
-    detailTitle.textContent = product.name;
+</script>
 
-    detailPrice.textContent =
-        product.price.toLocaleString() + " Ks";
-
-    detailDescription.textContent =
-        product.description;
-
-
-    fillSelect(
-        colorSelect,
-        product.colors
-    );
-
-    fillSelect(
-        sizeSelect,
-        product.sizes
-    );
-
-    fillSelect(
-        modelSelect,
-        product.models
-    );
-
-
-    quantityInput.value = 1;
-
-    quantityInput.max = product.stock;
-
-
-    updateSummary();
-
-
-    /* DETAIL BOX ကိုပဲ ဖွင့်မယ် */
-
-    productModal
+</body>
+</html>
