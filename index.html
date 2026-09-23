@@ -2,21 +2,23 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Here For You - Cute and affordable fashion watches, mini fans and lifestyle products.">
+        content="Here For You - Cute, useful and affordable watches, mini fans, fashion, bags and accessories.">
 
   <meta name="keywords"
-        content="Here For You, fashion watch, mini fan, Myanmar online shop">
+        content="Here For You, Myanmar online shop, watches, mini fans, fashion, bags, accessories">
 
   <meta name="author"
         content="Here For You">
 
-  <title>Here For You | Fashion • Watches • Mini Fans</title>
+  <title>Here For You | Cute • Simple • Affordable</title>
+
 
   <style>
 
@@ -32,248 +34,626 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #fff8fa;
-      color: #3d3035;
+      background: #fff9fb;
+      color: #403239;
+    }
+
+    body.modal-open {
+      overflow: hidden;
     }
 
 
-    /* =========================
-       TOP BAR
-    ========================== */
+    /* TOP BAR */
 
     .top-bar {
-      background: #3d3035;
+      background: #3f3037;
       color: white;
       text-align: center;
-      padding: 9px 10px;
+      padding: 9px;
       font-size: 13px;
-      letter-spacing: 0.5px;
+      letter-spacing: .5px;
     }
 
 
-    /* =========================
-       HEADER
-    ========================== */
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(255,255,255,.97);
+
+      border-bottom: 1px solid #f0dfe5;
+
+      padding: 14px 18px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: bold;
+      color: #8d5268;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #5d4a52;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #a05270;
+    }
+
+
+    /* HERO */
 
     header {
       background: linear-gradient(
         135deg,
-        #f9d9e2,
-        #fff0f4,
-        #f7d0dc
+        #f8dce5,
+        #fff3f6,
+        #f7d5df
       );
 
       text-align: center;
-      padding: 55px 20px 50px;
+
+      padding: 65px 20px;
     }
 
     .brand {
       font-family: Georgia, serif;
-      font-size: 45px;
-      font-weight: bold;
+      font-size: 48px;
       color: #8d5268;
-      letter-spacing: 1px;
+      font-weight: bold;
     }
 
     .tagline {
       margin-top: 12px;
-      color: #654c56;
+      color: #6d555e;
       font-size: 16px;
     }
 
-    .header-button {
+    .hero-text {
+      max-width: 600px;
+      margin: 15px auto 0;
+
+      color: #806b73;
+
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .hero-button {
       display: inline-block;
+
       margin-top: 25px;
-      padding: 13px 28px;
+
       background: #9c5d76;
       color: white;
-      text-decoration: none;
+
+      padding: 13px 30px;
+
       border-radius: 30px;
+
+      text-decoration: none;
+
       font-weight: bold;
-      box-shadow: 0 5px 15px rgba(120,60,90,0.18);
     }
 
 
-    /* =========================
-       CONTAINER
-    ========================== */
+    /* CONTAINER */
 
     .container {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
+
       padding: 45px 18px;
     }
 
 
-    /* =========================
-       SECTION TITLE
-    ========================== */
+    /* TITLES */
 
     .section-title {
       text-align: center;
-      margin-bottom: 32px;
+      margin-bottom: 25px;
     }
 
-    .section-title .small-title {
+    .small-title {
       color: #b36a84;
-      font-size: 13px;
+
+      font-size: 12px;
+
       font-weight: bold;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
+
       margin-bottom: 8px;
     }
 
     .section-title h2 {
       font-family: Georgia, serif;
+
       font-size: 32px;
+
       color: #4c3740;
     }
 
     .section-title p {
-      margin-top: 10px;
+      margin-top: 8px;
+
       color: #8b777f;
+
       font-size: 14px;
     }
 
 
-    /* =========================
-       PRODUCTS
-    ========================== */
+    /* SEARCH */
+
+    .search-box {
+      max-width: 550px;
+
+      margin: 0 auto 28px;
+
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+
+      padding: 15px 20px;
+
+      border: 1px solid #ead4dc;
+
+      border-radius: 30px;
+
+      outline: none;
+
+      font-size: 14px;
+
+      background: white;
+    }
+
+    .search-box input:focus {
+      border-color: #b36a84;
+    }
+
+
+    /* CATEGORIES */
+
+    .categories {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-bottom: 35px;
+    }
+
+    .category-btn {
+      border: 1px solid #e8cbd5;
+
+      background: white;
+
+      color: #795765;
+
+      padding: 10px 18px;
+
+      border-radius: 25px;
+
+      cursor: pointer;
+
+      font-size: 13px;
+
+      transition: .2s;
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+      background: #9c5d76;
+
+      color: white;
+
+      border-color: #9c5d76;
+    }
+
+
+    /* PRODUCTS */
 
     .products {
       display: grid;
+
       grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
+        repeat(auto-fit, minmax(245px, 1fr));
 
-      gap: 28px;
+      gap: 25px;
     }
-
-
-    /* =========================
-       PRODUCT CARD
-    ========================== */
 
     .product {
       position: relative;
+
       background: white;
-      border-radius: 22px;
-      padding: 14px;
-      text-align: center;
+
+      border-radius: 20px;
+
+      padding: 12px;
 
       box-shadow:
-        0 8px 30px rgba(110, 70, 85, 0.09);
+        0 8px 28px rgba(100,70,80,.08);
 
-      transition: 0.25s;
       overflow: hidden;
+
+      transition: .25s;
+
+      cursor: pointer;
     }
 
     .product:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
 
       box-shadow:
-        0 14px 35px rgba(110, 70, 85, 0.15);
+        0 14px 35px rgba(100,70,80,.14);
     }
-
-
-    /* =========================
-       NEW BADGE
-    ========================== */
 
     .badge {
       position: absolute;
-      top: 24px;
-      left: 24px;
+
+      top: 22px;
+      left: 22px;
 
       background: #9c5d76;
+
       color: white;
 
-      padding: 7px 12px;
+      padding: 6px 11px;
+
       border-radius: 20px;
 
-      font-size: 11px;
+      font-size: 10px;
+
       font-weight: bold;
-      letter-spacing: 0.5px;
 
       z-index: 2;
     }
 
-
-    /* =========================
-       PRODUCT IMAGE
-    ========================== */
-
     .product img {
       width: 100%;
-      height: 300px;
+
+      height: 260px;
 
       object-fit: cover;
 
-      border-radius: 17px;
+      border-radius: 15px;
+
       display: block;
     }
 
+    .product-info {
+      padding: 5px 5px 8px;
+    }
 
-    /* =========================
-       PRODUCT TEXT
-    ========================== */
+    .product-category {
+      margin-top: 14px;
+
+      color: #b36a84;
+
+      font-size: 11px;
+
+      font-weight: bold;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
 
     .product h3 {
-      margin-top: 18px;
+      margin-top: 6px;
+
       font-family: Georgia, serif;
-      font-size: 22px;
+
+      font-size: 20px;
+
       color: #4d3841;
     }
 
-    .product-description {
-      margin-top: 8px;
-      color: #8b777f;
-      font-size: 14px;
+    .description {
+      margin-top: 7px;
+
+      color: #89757d;
+
+      font-size: 13px;
+
       line-height: 1.5;
     }
 
     .price {
-      margin-top: 12px;
+      margin-top: 11px;
 
-      font-size: 18px;
+      color: #a05270;
+
+      font-size: 15px;
+
+      font-weight: bold;
+    }
+
+    .view-btn {
+      display: block;
+
+      text-align: center;
+
+      margin-top: 14px;
+
+      background: #9c5d76;
+
+      color: white;
+
+      padding: 11px;
+
+      border-radius: 25px;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: bold;
+    }
+
+    .view-btn:hover {
+      background: #7f465e;
+    }
+
+
+    /* NO RESULT */
+
+    .no-result {
+      display: none;
+
+      text-align: center;
+
+      padding: 40px;
+
+      color: #907b84;
+    }
+
+
+    /* PRODUCT DETAIL MODAL */
+
+    .modal {
+      display: none;
+
+      position: fixed;
+
+      z-index: 500;
+
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(45,30,38,.65);
+
+      padding: 25px 15px;
+
+      overflow-y: auto;
+    }
+
+    .modal.show {
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+    }
+
+    .modal-content {
+      position: relative;
+
+      width: 100%;
+
+      max-width: 850px;
+
+      background: white;
+
+      border-radius: 25px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.2);
+
+      animation: popup .2s ease;
+    }
+
+    @keyframes popup {
+
+      from {
+        transform: scale(.94);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+    }
+
+    .close-btn {
+      position: absolute;
+
+      right: 15px;
+      top: 15px;
+
+      width: 38px;
+      height: 38px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,.92);
+
+      color: #5d4650;
+
+      font-size: 22px;
+
+      cursor: pointer;
+
+      z-index: 5;
+
+      box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    }
+
+    .detail-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .detail-image {
+      width: 100%;
+
+      height: 100%;
+
+      min-height: 500px;
+
+      object-fit: cover;
+    }
+
+    .detail-info {
+      padding: 45px 35px;
+    }
+
+    .detail-category {
+      color: #b36a84;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .detail-title {
+      margin-top: 9px;
+
+      font-family: Georgia, serif;
+
+      font-size: 32px;
+
+      color: #4d3841;
+    }
+
+    .detail-description {
+      margin-top: 15px;
+
+      color: #76636b;
+
+      line-height: 1.7;
+
+      font-size: 14px;
+    }
+
+    .detail-price {
+      margin-top: 20px;
+
+      font-size: 21px;
+
       font-weight: bold;
 
       color: #a05270;
     }
 
+    .detail-box {
+      margin-top: 20px;
 
-    /* =========================
-       ORDER BUTTON
-    ========================== */
+      background: #fff5f7;
 
-    .order-btn {
-      display: inline-block;
+      border-radius: 15px;
 
-      margin-top: 15px;
+      padding: 16px;
+    }
 
-      padding: 12px 25px;
+    .detail-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 7px 0;
+
+      border-bottom: 1px solid #f0dfe5;
+
+      font-size: 14px;
+    }
+
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      color: #8b737d;
+    }
+
+    .detail-value {
+      color: #4e3a42;
+
+      font-weight: bold;
+
+      text-align: right;
+    }
+
+    .order-detail-btn {
+      display: block;
+
+      margin-top: 22px;
+
+      width: 100%;
+
+      text-align: center;
 
       background: #9c5d76;
+
       color: white;
+
+      padding: 14px;
+
+      border-radius: 30px;
 
       text-decoration: none;
 
-      border-radius: 28px;
-
-      font-size: 14px;
       font-weight: bold;
 
-      transition: 0.2s;
+      font-size: 15px;
     }
 
-    .order-btn:hover {
+    .order-detail-btn:hover {
       background: #7f465e;
-      transform: scale(1.03);
     }
 
 
-    /* =========================
-       ABOUT SECTION
-    ========================== */
+    /* ABOUT */
 
     .about {
       margin-top: 55px;
@@ -286,74 +666,78 @@
 
       border-radius: 25px;
 
-      padding: 35px 25px;
+      padding: 38px 25px;
 
       text-align: center;
     }
 
     .about h2 {
       font-family: Georgia, serif;
+
       color: #704758;
+
       margin-bottom: 12px;
     }
 
     .about p {
-      max-width: 650px;
+      max-width: 680px;
+
       margin: auto;
 
       color: #705c64;
-      line-height: 1.7;
+
+      line-height: 1.8;
+
       font-size: 14px;
     }
 
 
-    /* =========================
-       CONTACT
-    ========================== */
+    /* CONTACT */
 
     .contact {
       margin-top: 45px;
 
-      background: #3d3035;
+      background: #3f3037;
 
       color: white;
 
       border-radius: 25px;
 
-      padding: 38px 20px;
+      padding: 40px 20px;
 
       text-align: center;
     }
 
     .contact h2 {
       font-family: Georgia, serif;
+
       font-size: 28px;
     }
 
     .contact p {
       margin-top: 10px;
+
       color: #eadde2;
+
       font-size: 14px;
     }
 
     .contact-buttons {
-      margin-top: 22px;
+      margin-top: 23px;
 
       display: flex;
+
       justify-content: center;
+
       flex-wrap: wrap;
+
       gap: 12px;
     }
-
-
-    /* =========================
-       CONTACT BUTTONS
-    ========================== */
 
     .contact-btn {
       display: inline-block;
 
-      padding: 12px 22px;
+      padding: 12px 23px;
 
       border-radius: 28px;
 
@@ -366,18 +750,18 @@
 
     .call-btn {
       background: white;
-      color: #3d3035;
+
+      color: #3f3037;
     }
 
     .viber-btn {
       background: #9c5d76;
+
       color: white;
     }
 
 
-    /* =========================
-       FOOTER
-    ========================== */
+    /* FOOTER */
 
     footer {
       text-align: center;
@@ -390,39 +774,62 @@
     }
 
 
-    /* =========================
-       MOBILE
-    ========================== */
+    /* MOBILE */
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+
+      nav {
+        flex-direction: column;
+
+        gap: 10px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
 
       .brand {
-        font-size: 35px;
+        font-size: 37px;
       }
 
       header {
-        padding: 42px 15px;
-      }
-
-      .container {
-        padding: 35px 14px;
-      }
-
-      .section-title h2 {
-        font-size: 27px;
-      }
-
-      .product img {
-        height: 270px;
+        padding: 48px 15px;
       }
 
       .products {
         grid-template-columns: 1fr;
       }
 
+      .product img {
+        height: 300px;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-image {
+        height: 330px;
+        min-height: 0;
+      }
+
+      .detail-info {
+        padding: 30px 22px 35px;
+      }
+
+      .detail-title {
+        font-size: 27px;
+      }
+
+      .modal {
+        padding: 10px;
+        align-items: flex-start;
+      }
+
     }
 
   </style>
+
 </head>
 
 
@@ -436,9 +843,48 @@
   </div>
 
 
-  <!-- HEADER -->
+  <!-- NAVIGATION -->
 
-  <header>
+  <nav>
+
+    <div class="nav-logo">
+      Here For You
+    </div>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#home">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#products">
+          Shop
+        </a>
+      </li>
+
+      <li>
+        <a href="#about">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header id="home">
 
     <div class="brand">
       Here For You
@@ -448,14 +894,20 @@
       Little things, made for you. ♡
     </div>
 
+    <p class="hero-text">
+      Discover cute, useful and affordable
+      products for your everyday life.
+    </p>
+
     <a
-      class="header-button"
-      href="#products">
-      Shop Now
+      href="#products"
+      class="hero-button">
+
+      🛍️ Shop Now
+
     </a>
 
   </header>
-
 
 
   <!-- MAIN -->
@@ -463,33 +915,96 @@
   <main class="container">
 
 
-    <!-- PRODUCT SECTION -->
+    <!-- PRODUCTS -->
 
     <section id="products">
 
       <div class="section-title">
 
         <div class="small-title">
-          New Collection
+          Our Collection
         </div>
 
         <h2>
-          Our Products
+          Shop Our Products
         </h2>
 
         <p>
-          Cute • Simple • Affordable
+          Tap a product to see more details.
         </p>
 
       </div>
 
 
-      <div class="products">
+      <!-- SEARCH -->
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔎 Search products..."
+          onkeyup="searchProducts()">
+
+      </div>
 
 
-        <!-- WATCH -->
+      <!-- CATEGORY -->
 
-        <div class="product">
+      <div class="categories">
+
+        <button
+          class="category-btn active"
+          onclick="filterProducts('all', this)">
+          All
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('watch', this)">
+          ⌚ Watches
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('fan', this)">
+          🌬️ Mini Fans
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('fashion', this)">
+          👗 Fashion
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('bag', this)">
+          👜 Bags
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('accessory', this)">
+          🎀 Accessories
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT GRID -->
+
+      <div
+        class="products"
+        id="productGrid">
+
+
+        <!-- WATCH 1 -->
+
+        <div
+          class="product"
+          data-category="watch"
+          onclick="openProduct(0)">
 
           <div class="badge">
             NEW
@@ -499,106 +1014,364 @@
             src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
             alt="Fashion Watch">
 
-          <h3>
-            Fashion Watch
-          </h3>
+          <div class="product-info">
 
-          <p class="product-description">
-            Stylish everyday watch for your
-            simple and beautiful look.
-          </p>
+            <div class="product-category">
+              Watches
+            </div>
 
-          <p class="price">
-            Price - Contact Us
-          </p>
+            <h3>
+              Fashion Watch
+            </h3>
 
-          <a
-            class="order-btn"
-            href="viber://chat?number=%2B959974439104">
+            <p class="description">
+              Simple and elegant watch
+              for everyday style.
+            </p>
 
-            🛍️ Order Now
+            <p class="price">
+              Price - Contact Us
+            </p>
 
-          </a>
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
 
         </div>
 
 
+        <!-- WATCH 2 -->
 
-        <!-- MINI FAN -->
+        <div
+          class="product"
+          data-category="watch"
+          onclick="openProduct(1)">
 
-        <div class="product">
+          <img
+            src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85"
+            alt="Classic Watch">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Watches
+            </div>
+
+            <h3>
+              Classic Watch
+            </h3>
+
+            <p class="description">
+              Clean and classic design
+              for daily outfits.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FAN 1 -->
+
+        <div
+          class="product"
+          data-category="fan"
+          onclick="openProduct(2)">
 
           <div class="badge">
             NEW
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1591105866065-3c4f8b1f2d5e?auto=format&fit=crop&w=900&q=85"
-            alt="Mini Fan">
+            src="https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85"
+            alt="Mini Portable Fan">
 
-          <h3>
-            Mini Fan
-          </h3>
+          <div class="product-info">
 
-          <p class="product-description">
-            Compact and convenient fan
-            for everyday use.
-          </p>
+            <div class="product-category">
+              Mini Fans
+            </div>
 
-          <p class="price">
-            Price - Contact Us
-          </p>
+            <h3>
+              Mini Portable Fan
+            </h3>
 
-          <a
-            class="order-btn"
-            href="viber://chat?number=%2B959974439104">
+            <p class="description">
+              Small, convenient and
+              easy to carry anywhere.
+            </p>
 
-            🛍️ Order Now
+            <p class="price">
+              Price - Contact Us
+            </p>
 
-          </a>
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FAN 2 -->
+
+        <div
+          class="product"
+          data-category="fan"
+          onclick="openProduct(3)">
+
+          <img
+            src="https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85"
+            alt="Portable Fan">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Mini Fans
+            </div>
+
+            <h3>
+              Portable Cooling Fan
+            </h3>
+
+            <p class="description">
+              Perfect little companion
+              for hot days.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FASHION -->
+
+        <div
+          class="product"
+          data-category="fashion"
+          onclick="openProduct(4)">
+
+          <div class="badge">
+            NEW
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+            alt="Everyday Fashion">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Fashion
+            </div>
+
+            <h3>
+              Everyday Fashion
+            </h3>
+
+            <p class="description">
+              Cute and easy-to-wear
+              everyday fashion pieces.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- BAG -->
+
+        <div
+          class="product"
+          data-category="bag"
+          onclick="openProduct(5)">
+
+          <img
+            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+            alt="Everyday Bag">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Bags
+            </div>
+
+            <h3>
+              Everyday Bag
+            </h3>
+
+            <p class="description">
+              Simple and practical bag
+              for everyday use.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ACCESSORY 1 -->
+
+        <div
+          class="product"
+          data-category="accessory"
+          onclick="openProduct(6)">
+
+          <img
+            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85"
+            alt="Cute Accessories">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Accessories
+            </div>
+
+            <h3>
+              Cute Accessories
+            </h3>
+
+            <p class="description">
+              Small details that make
+              your everyday style special.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ACCESSORY 2 -->
+
+        <div
+          class="product"
+          data-category="accessory"
+          onclick="openProduct(7)">
+
+          <img
+            src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85"
+            alt="Simple Jewelry">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Accessories
+            </div>
+
+            <h3>
+              Simple Jewelry
+            </h3>
+
+            <p class="description">
+              Elegant little pieces
+              for your daily look.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
 
         </div>
 
 
       </div>
 
-    </section>
 
+      <div
+        class="no-result"
+        id="noResult">
+
+        Sorry, no products found. ♡
+
+      </div>
+
+    </section>
 
 
     <!-- ABOUT -->
 
-    <section class="about">
+    <section
+      class="about"
+      id="about">
 
       <h2>
         About Here For You
       </h2>
 
       <p>
-        Welcome to Here For You.
-        We bring you cute, useful and
-        affordable products that are
-        perfect for everyday life.
-        Stay tuned for more new arrivals. ♡
+        Welcome to Here For You. ♡
+        We bring you cute, useful and affordable
+        products that are perfect for everyday life.
+        New products and collections will be added
+        regularly, so stay tuned for more.
       </p>
 
     </section>
 
 
-
     <!-- CONTACT -->
 
-    <section class="contact" id="contact">
+    <section
+      class="contact"
+      id="contact">
 
       <h2>
         Need Help? 💕
       </h2>
 
       <p>
-        Order or ask about our products.
+        Want to order or ask about a product?
         We are here for you.
       </p>
-
 
       <div class="contact-buttons">
 
@@ -609,7 +1382,6 @@
           📞 Call Now
 
         </a>
-
 
         <a
           class="contact-btn viber-btn"
@@ -623,9 +1395,7 @@
 
     </section>
 
-
   </main>
-
 
 
   <!-- FOOTER -->
@@ -637,6 +1407,2261 @@
     Made with ♡
 
   </footer>
+
+
+  <!-- PRODUCT DETAIL POPUP -->
+
+  <div
+    class="modal"
+    id="productModal"
+    onclick="closeOutside(event)">
+
+    <div class="modal-content">
+
+      <button
+        class="close-btn"
+        onclick="closeProduct()">
+
+        ×
+
+      </button>
+
+
+      <div class="detail-grid">
+
+
+        <img
+          id="detailImage"
+          class="detail-image"
+          src=""
+          alt="Product">
+
+
+        <div class="detail-info">
+
+          <div
+            id="detailCategory"
+            class="detail-category">
+          </div>
+
+
+          <h2
+            id="detailTitle"
+            class="detail-title">
+          </h2>
+
+
+          <p
+            id="detailDescription"
+            class="detail-description">
+          </p>
+
+
+          <div
+            id="detailPrice"
+            class="detail-price">
+          </div>
+
+
+          <div class="detail-box">
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                🎨 Color
+              </span>
+
+              <span
+                id="detailColor"
+                class="detail-value">
+              </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                📏 Size / Model
+              </span>
+
+              <span
+                id="detailSize"
+                class="detail-value">
+              </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                📦 Stock
+              </span>
+
+              <span
+                id="detailStock"
+                class="detail-value">
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+          <a
+            id="detailOrder"
+            class="order-detail-btn"
+            href="#">
+
+            💜 Order via Viber
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+
+    /* PRODUCT DATA */
+
+    const products = [
+
+      {
+        category: "Watches",
+        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
+        title: "Fashion Watch",
+        description: "Simple and elegant watch for everyday style. A cute choice for casual and daily outfits.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Standard",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Watches",
+        image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85",
+        title: "Classic Watch",
+        description: "Clean and classic design for daily outfits and simple elegant looks.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Standard",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Mini Fans",
+        image: "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85",
+        title: "Mini Portable Fan",
+        description: "Small, convenient and easy to carry. Perfect for everyday use and outdoor trips.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Mini",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Mini Fans",
+        image: "https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85",
+        title: "Portable Cooling Fan",
+        description: "A convenient little fan for hot days at home, office or outdoors.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Portable",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Fashion",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85",
+        title: "Everyday Fashion",
+        description: "Cute and easy-to-wear fashion pieces for everyday outfits.",
+        price: "Price - Contact Us",
+        color: "Various",
+        size: "Various",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Bags",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85",
+        title: "Everyday Bag",
+        description: "Simple and practical bag for everyday use, shopping and casual outings.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Standard",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Accessories",
+        image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85",
+        title: "Cute Accessories",
+        description: "Small details that make your everyday style more special.",
+        price: "Price - Contact Us",
+        color: "Various",
+        size: "Standard",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Accessories",
+        image: "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85",
+        title: "Simple Jewelry",
+        description: "Elegant little pieces for your daily look and special occasions.",
+        price: "Price - Contact Us",
+        color: "Various",
+        size: "Standard",
+        stock: "Available Soon"
+      }
+
+    ];
+
+
+    /* OPEN PRODUCT */
+
+    function openProduct(index) {
+
+      const product = products[index];
+
+      document.getElementById("detailImage").src =
+        product.image;
+
+      document.getElementById("detailCategory").innerText =
+        product.category;
+
+      document.getElementById("detailTitle").innerText =
+        product.title;
+
+      document.getElementById("detailDescription").innerText =
+        product.description;
+
+      document.getElementById("detailPrice").innerText =
+        product.price;
+
+      document.getElementById("detailColor").innerText =
+        product.color;
+
+      document.getElementById("detailSize").innerText =
+        product.size;
+
+      document.getElementById("detailStock").innerText =
+        product.stock;
+
+      document.getElementById("detailOrder").href =
+        "viber://chat?number=%2B959974439104";
+
+      document.getElementById("productModal")
+        .classList.add("show");
+
+      document.body.classList.add("modal-open");
+
+    }
+
+
+    /* CLOSE PRODUCT */
+
+    function closeProduct() {
+
+      document.getElementById("productModal")
+        .classList.remove("show");
+
+      document.body.classList.remove("modal-open");
+
+    }
+
+
+    /* CLICK OUTSIDE */
+
+    function closeOutside(event) {
+
+      if (
+        event.target ===
+        document.getElementById("productModal")
+      ) {
+
+        closeProduct();
+
+      }
+
+    }
+
+
+    /* ESC KEY */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          closeProduct();
+
+        }
+
+      }
+    );
+
+
+    /* CATEGORY */
+
+    let currentCategory = "all";
+
+
+    function filterProducts(category, button) {
+
+      currentCategory = category;
+
+      document
+        .querySelectorAll(".category-btn")
+        .forEach(btn => {
+
+          btn.classList.remove("active");
+
+        });
+
+
+      button.classList.add("active");
+
+      applyFilters();
+
+    }
+
+
+    /* SEARCH */
+
+    function searchProducts() {
+
+      applyFilters();
+
+    }
+
+
+    /* FILTER */
+
+    function applyFilters() {
+
+      const search =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase();
+
+
+      const productCards =
+        document.querySelectorAll(".product");
+
+
+      let found = 0;
+
+
+      productCards.forEach(card => {
+
+        const category =
+          card.dataset.category;
+
+
+        const text =
+          card.innerText.toLowerCase();
+
+
+        const categoryMatch =
+          currentCategory === "all" ||
+          category === currentCategory;
+
+
+        const searchMatch =
+          text.includes(search);
+
+
+        if (
+          categoryMatch &&
+     <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Here For You - Cute, useful and affordable watches, mini fans, fashion, bags and accessories.">
+
+  <meta name="keywords"
+        content="Here For You, Myanmar online shop, watches, mini fans, fashion, bags, accessories">
+
+  <meta name="author"
+        content="Here For You">
+
+  <title>Here For You | Cute • Simple • Affordable</title>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff9fb;
+      color: #403239;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+
+    /* TOP BAR */
+
+    .top-bar {
+      background: #3f3037;
+      color: white;
+      text-align: center;
+      padding: 9px;
+      font-size: 13px;
+      letter-spacing: .5px;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(255,255,255,.97);
+
+      border-bottom: 1px solid #f0dfe5;
+
+      padding: 14px 18px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      font-weight: bold;
+      color: #8d5268;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #5d4a52;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #a05270;
+    }
+
+
+    /* HERO */
+
+    header {
+      background: linear-gradient(
+        135deg,
+        #f8dce5,
+        #fff3f6,
+        #f7d5df
+      );
+
+      text-align: center;
+
+      padding: 65px 20px;
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 48px;
+      color: #8d5268;
+      font-weight: bold;
+    }
+
+    .tagline {
+      margin-top: 12px;
+      color: #6d555e;
+      font-size: 16px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      margin: 15px auto 0;
+
+      color: #806b73;
+
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .hero-button {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      background: #9c5d76;
+      color: white;
+
+      padding: 13px 30px;
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+    }
+
+
+    /* CONTAINER */
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+
+      padding: 45px 18px;
+    }
+
+
+    /* TITLES */
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .small-title {
+      color: #b36a84;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+
+      font-size: 32px;
+
+      color: #4c3740;
+    }
+
+    .section-title p {
+      margin-top: 8px;
+
+      color: #8b777f;
+
+      font-size: 14px;
+    }
+
+
+    /* SEARCH */
+
+    .search-box {
+      max-width: 550px;
+
+      margin: 0 auto 28px;
+
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+
+      padding: 15px 20px;
+
+      border: 1px solid #ead4dc;
+
+      border-radius: 30px;
+
+      outline: none;
+
+      font-size: 14px;
+
+      background: white;
+    }
+
+    .search-box input:focus {
+      border-color: #b36a84;
+    }
+
+
+    /* CATEGORIES */
+
+    .categories {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-bottom: 35px;
+    }
+
+    .category-btn {
+      border: 1px solid #e8cbd5;
+
+      background: white;
+
+      color: #795765;
+
+      padding: 10px 18px;
+
+      border-radius: 25px;
+
+      cursor: pointer;
+
+      font-size: 13px;
+
+      transition: .2s;
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+      background: #9c5d76;
+
+      color: white;
+
+      border-color: #9c5d76;
+    }
+
+
+    /* PRODUCTS */
+
+    .products {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(245px, 1fr));
+
+      gap: 25px;
+    }
+
+    .product {
+      position: relative;
+
+      background: white;
+
+      border-radius: 20px;
+
+      padding: 12px;
+
+      box-shadow:
+        0 8px 28px rgba(100,70,80,.08);
+
+      overflow: hidden;
+
+      transition: .25s;
+
+      cursor: pointer;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 14px 35px rgba(100,70,80,.14);
+    }
+
+    .badge {
+      position: absolute;
+
+      top: 22px;
+      left: 22px;
+
+      background: #9c5d76;
+
+      color: white;
+
+      padding: 6px 11px;
+
+      border-radius: 20px;
+
+      font-size: 10px;
+
+      font-weight: bold;
+
+      z-index: 2;
+    }
+
+    .product img {
+      width: 100%;
+
+      height: 260px;
+
+      object-fit: cover;
+
+      border-radius: 15px;
+
+      display: block;
+    }
+
+    .product-info {
+      padding: 5px 5px 8px;
+    }
+
+    .product-category {
+      margin-top: 14px;
+
+      color: #b36a84;
+
+      font-size: 11px;
+
+      font-weight: bold;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+    .product h3 {
+      margin-top: 6px;
+
+      font-family: Georgia, serif;
+
+      font-size: 20px;
+
+      color: #4d3841;
+    }
+
+    .description {
+      margin-top: 7px;
+
+      color: #89757d;
+
+      font-size: 13px;
+
+      line-height: 1.5;
+    }
+
+    .price {
+      margin-top: 11px;
+
+      color: #a05270;
+
+      font-size: 15px;
+
+      font-weight: bold;
+    }
+
+    .view-btn {
+      display: block;
+
+      text-align: center;
+
+      margin-top: 14px;
+
+      background: #9c5d76;
+
+      color: white;
+
+      padding: 11px;
+
+      border-radius: 25px;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: bold;
+    }
+
+    .view-btn:hover {
+      background: #7f465e;
+    }
+
+
+    /* NO RESULT */
+
+    .no-result {
+      display: none;
+
+      text-align: center;
+
+      padding: 40px;
+
+      color: #907b84;
+    }
+
+
+    /* PRODUCT DETAIL MODAL */
+
+    .modal {
+      display: none;
+
+      position: fixed;
+
+      z-index: 500;
+
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(45,30,38,.65);
+
+      padding: 25px 15px;
+
+      overflow-y: auto;
+    }
+
+    .modal.show {
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+    }
+
+    .modal-content {
+      position: relative;
+
+      width: 100%;
+
+      max-width: 850px;
+
+      background: white;
+
+      border-radius: 25px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.2);
+
+      animation: popup .2s ease;
+    }
+
+    @keyframes popup {
+
+      from {
+        transform: scale(.94);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+    }
+
+    .close-btn {
+      position: absolute;
+
+      right: 15px;
+      top: 15px;
+
+      width: 38px;
+      height: 38px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,.92);
+
+      color: #5d4650;
+
+      font-size: 22px;
+
+      cursor: pointer;
+
+      z-index: 5;
+
+      box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    }
+
+    .detail-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .detail-image {
+      width: 100%;
+
+      height: 100%;
+
+      min-height: 500px;
+
+      object-fit: cover;
+    }
+
+    .detail-info {
+      padding: 45px 35px;
+    }
+
+    .detail-category {
+      color: #b36a84;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .detail-title {
+      margin-top: 9px;
+
+      font-family: Georgia, serif;
+
+      font-size: 32px;
+
+      color: #4d3841;
+    }
+
+    .detail-description {
+      margin-top: 15px;
+
+      color: #76636b;
+
+      line-height: 1.7;
+
+      font-size: 14px;
+    }
+
+    .detail-price {
+      margin-top: 20px;
+
+      font-size: 21px;
+
+      font-weight: bold;
+
+      color: #a05270;
+    }
+
+    .detail-box {
+      margin-top: 20px;
+
+      background: #fff5f7;
+
+      border-radius: 15px;
+
+      padding: 16px;
+    }
+
+    .detail-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 7px 0;
+
+      border-bottom: 1px solid #f0dfe5;
+
+      font-size: 14px;
+    }
+
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      color: #8b737d;
+    }
+
+    .detail-value {
+      color: #4e3a42;
+
+      font-weight: bold;
+
+      text-align: right;
+    }
+
+    .order-detail-btn {
+      display: block;
+
+      margin-top: 22px;
+
+      width: 100%;
+
+      text-align: center;
+
+      background: #9c5d76;
+
+      color: white;
+
+      padding: 14px;
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      font-size: 15px;
+    }
+
+    .order-detail-btn:hover {
+      background: #7f465e;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+      margin-top: 55px;
+
+      background: linear-gradient(
+        135deg,
+        #fff0f4,
+        #fde0e8
+      );
+
+      border-radius: 25px;
+
+      padding: 38px 25px;
+
+      text-align: center;
+    }
+
+    .about h2 {
+      font-family: Georgia, serif;
+
+      color: #704758;
+
+      margin-bottom: 12px;
+    }
+
+    .about p {
+      max-width: 680px;
+
+      margin: auto;
+
+      color: #705c64;
+
+      line-height: 1.8;
+
+      font-size: 14px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+      margin-top: 45px;
+
+      background: #3f3037;
+
+      color: white;
+
+      border-radius: 25px;
+
+      padding: 40px 20px;
+
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: Georgia, serif;
+
+      font-size: 28px;
+    }
+
+    .contact p {
+      margin-top: 10px;
+
+      color: #eadde2;
+
+      font-size: 14px;
+    }
+
+    .contact-buttons {
+      margin-top: 23px;
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+
+      padding: 12px 23px;
+
+      border-radius: 28px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      font-size: 14px;
+    }
+
+    .call-btn {
+      background: white;
+
+      color: #3f3037;
+    }
+
+    .viber-btn {
+      background: #9c5d76;
+
+      color: white;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+
+      padding: 28px 15px;
+
+      color: #9a858d;
+
+      font-size: 13px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        flex-direction: column;
+
+        gap: 10px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .brand {
+        font-size: 37px;
+      }
+
+      header {
+        padding: 48px 15px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product img {
+        height: 300px;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-image {
+        height: 330px;
+        min-height: 0;
+      }
+
+      .detail-info {
+        padding: 30px 22px 35px;
+      }
+
+      .detail-title {
+        font-size: 27px;
+      }
+
+      .modal {
+        padding: 10px;
+        align-items: flex-start;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+    ✨ Welcome to Here For You ✨
+  </div>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="nav-logo">
+      Here For You
+    </div>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#home">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#products">
+          Shop
+        </a>
+      </li>
+
+      <li>
+        <a href="#about">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header id="home">
+
+    <div class="brand">
+      Here For You
+    </div>
+
+    <div class="tagline">
+      Little things, made for you. ♡
+    </div>
+
+    <p class="hero-text">
+      Discover cute, useful and affordable
+      products for your everyday life.
+    </p>
+
+    <a
+      href="#products"
+      class="hero-button">
+
+      🛍️ Shop Now
+
+    </a>
+
+  </header>
+
+
+  <!-- MAIN -->
+
+  <main class="container">
+
+
+    <!-- PRODUCTS -->
+
+    <section id="products">
+
+      <div class="section-title">
+
+        <div class="small-title">
+          Our Collection
+        </div>
+
+        <h2>
+          Shop Our Products
+        </h2>
+
+        <p>
+          Tap a product to see more details.
+        </p>
+
+      </div>
+
+
+      <!-- SEARCH -->
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔎 Search products..."
+          onkeyup="searchProducts()">
+
+      </div>
+
+
+      <!-- CATEGORY -->
+
+      <div class="categories">
+
+        <button
+          class="category-btn active"
+          onclick="filterProducts('all', this)">
+          All
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('watch', this)">
+          ⌚ Watches
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('fan', this)">
+          🌬️ Mini Fans
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('fashion', this)">
+          👗 Fashion
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('bag', this)">
+          👜 Bags
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterProducts('accessory', this)">
+          🎀 Accessories
+        </button>
+
+      </div>
+
+
+      <!-- PRODUCT GRID -->
+
+      <div
+        class="products"
+        id="productGrid">
+
+
+        <!-- WATCH 1 -->
+
+        <div
+          class="product"
+          data-category="watch"
+          onclick="openProduct(0)">
+
+          <div class="badge">
+            NEW
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+            alt="Fashion Watch">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Watches
+            </div>
+
+            <h3>
+              Fashion Watch
+            </h3>
+
+            <p class="description">
+              Simple and elegant watch
+              for everyday style.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- WATCH 2 -->
+
+        <div
+          class="product"
+          data-category="watch"
+          onclick="openProduct(1)">
+
+          <img
+            src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85"
+            alt="Classic Watch">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Watches
+            </div>
+
+            <h3>
+              Classic Watch
+            </h3>
+
+            <p class="description">
+              Clean and classic design
+              for daily outfits.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FAN 1 -->
+
+        <div
+          class="product"
+          data-category="fan"
+          onclick="openProduct(2)">
+
+          <div class="badge">
+            NEW
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85"
+            alt="Mini Portable Fan">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Mini Fans
+            </div>
+
+            <h3>
+              Mini Portable Fan
+            </h3>
+
+            <p class="description">
+              Small, convenient and
+              easy to carry anywhere.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FAN 2 -->
+
+        <div
+          class="product"
+          data-category="fan"
+          onclick="openProduct(3)">
+
+          <img
+            src="https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85"
+            alt="Portable Fan">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Mini Fans
+            </div>
+
+            <h3>
+              Portable Cooling Fan
+            </h3>
+
+            <p class="description">
+              Perfect little companion
+              for hot days.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FASHION -->
+
+        <div
+          class="product"
+          data-category="fashion"
+          onclick="openProduct(4)">
+
+          <div class="badge">
+            NEW
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+            alt="Everyday Fashion">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Fashion
+            </div>
+
+            <h3>
+              Everyday Fashion
+            </h3>
+
+            <p class="description">
+              Cute and easy-to-wear
+              everyday fashion pieces.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- BAG -->
+
+        <div
+          class="product"
+          data-category="bag"
+          onclick="openProduct(5)">
+
+          <img
+            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+            alt="Everyday Bag">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Bags
+            </div>
+
+            <h3>
+              Everyday Bag
+            </h3>
+
+            <p class="description">
+              Simple and practical bag
+              for everyday use.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ACCESSORY 1 -->
+
+        <div
+          class="product"
+          data-category="accessory"
+          onclick="openProduct(6)">
+
+          <img
+            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85"
+            alt="Cute Accessories">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Accessories
+            </div>
+
+            <h3>
+              Cute Accessories
+            </h3>
+
+            <p class="description">
+              Small details that make
+              your everyday style special.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ACCESSORY 2 -->
+
+        <div
+          class="product"
+          data-category="accessory"
+          onclick="openProduct(7)">
+
+          <img
+            src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85"
+            alt="Simple Jewelry">
+
+          <div class="product-info">
+
+            <div class="product-category">
+              Accessories
+            </div>
+
+            <h3>
+              Simple Jewelry
+            </h3>
+
+            <p class="description">
+              Elegant little pieces
+              for your daily look.
+            </p>
+
+            <p class="price">
+              Price - Contact Us
+            </p>
+
+            <div class="view-btn">
+              👀 View Details
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="no-result"
+        id="noResult">
+
+        Sorry, no products found. ♡
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section
+      class="about"
+      id="about">
+
+      <h2>
+        About Here For You
+      </h2>
+
+      <p>
+        Welcome to Here For You. ♡
+        We bring you cute, useful and affordable
+        products that are perfect for everyday life.
+        New products and collections will be added
+        regularly, so stay tuned for more.
+      </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section
+      class="contact"
+      id="contact">
+
+      <h2>
+        Need Help? 💕
+      </h2>
+
+      <p>
+        Want to order or ask about a product?
+        We are here for you.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a
+          class="contact-btn call-btn"
+          href="tel:+959974439104">
+
+          📞 Call Now
+
+        </a>
+
+        <a
+          class="contact-btn viber-btn"
+          href="viber://chat?number=%2B959974439104">
+
+          💜 Viber
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Here For You
+    <br>
+    Made with ♡
+
+  </footer>
+
+
+  <!-- PRODUCT DETAIL POPUP -->
+
+  <div
+    class="modal"
+    id="productModal"
+    onclick="closeOutside(event)">
+
+    <div class="modal-content">
+
+      <button
+        class="close-btn"
+        onclick="closeProduct()">
+
+        ×
+
+      </button>
+
+
+      <div class="detail-grid">
+
+
+        <img
+          id="detailImage"
+          class="detail-image"
+          src=""
+          alt="Product">
+
+
+        <div class="detail-info">
+
+          <div
+            id="detailCategory"
+            class="detail-category">
+          </div>
+
+
+          <h2
+            id="detailTitle"
+            class="detail-title">
+          </h2>
+
+
+          <p
+            id="detailDescription"
+            class="detail-description">
+          </p>
+
+
+          <div
+            id="detailPrice"
+            class="detail-price">
+          </div>
+
+
+          <div class="detail-box">
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                🎨 Color
+              </span>
+
+              <span
+                id="detailColor"
+                class="detail-value">
+              </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                📏 Size / Model
+              </span>
+
+              <span
+                id="detailSize"
+                class="detail-value">
+              </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+              <span class="detail-label">
+                📦 Stock
+              </span>
+
+              <span
+                id="detailStock"
+                class="detail-value">
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+          <a
+            id="detailOrder"
+            class="order-detail-btn"
+            href="#">
+
+            💜 Order via Viber
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+
+    /* PRODUCT DATA */
+
+    const products = [
+
+      {
+        category: "Watches",
+        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
+        title: "Fashion Watch",
+        description: "Simple and elegant watch for everyday style. A cute choice for casual and daily outfits.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Standard",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Watches",
+        image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85",
+        title: "Classic Watch",
+        description: "Clean and classic design for daily outfits and simple elegant looks.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Standard",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Mini Fans",
+        image: "https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=900&q=85",
+        title: "Mini Portable Fan",
+        description: "Small, convenient and easy to carry. Perfect for everyday use and outdoor trips.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Mini",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Mini Fans",
+        image: "https://images.unsplash.com/photo-1565538420870-da08ff96a207?auto=format&fit=crop&w=900&q=85",
+        title: "Portable Cooling Fan",
+        description: "A convenient little fan for hot days at home, office or outdoors.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Portable",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Fashion",
+        image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85",
+        title: "Everyday Fashion",
+        description: "Cute and easy-to-wear fashion pieces for everyday outfits.",
+        price: "Price - Contact Us",
+        color: "Various",
+        size: "Various",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Bags",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85",
+        title: "Everyday Bag",
+        description: "Simple and practical bag for everyday use, shopping and casual outings.",
+        price: "Price - Contact Us",
+        color: "Available Soon",
+        size: "Standard",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Accessories",
+        image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85",
+        title: "Cute Accessories",
+        description: "Small details that make your everyday style more special.",
+        price: "Price - Contact Us",
+        color: "Various",
+        size: "Standard",
+        stock: "Available Soon"
+      },
+
+
+      {
+        category: "Accessories",
+        image: "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=85",
+        title: "Simple Jewelry",
+        description: "Elegant little pieces for your daily look and special occasions.",
+        price: "Price - Contact Us",
+        color: "Various",
+        size: "Standard",
+        stock: "Available Soon"
+      }
+
+    ];
+
+
+    /* OPEN PRODUCT */
+
+    function openProduct(index) {
+
+      const product = products[index];
+
+      document.getElementById("detailImage").src =
+        product.image;
+
+      document.getElementById("detailCategory").innerText =
+        product.category;
+
+      document.getElementById("detailTitle").innerText =
+        product.title;
+
+      document.getElementById("detailDescription").innerText =
+        product.description;
+
+      document.getElementById("detailPrice").innerText =
+        product.price;
+
+      document.getElementById("detailColor").innerText =
+        product.color;
+
+      document.getElementById("detailSize").innerText =
+        product.size;
+
+      document.getElementById("detailStock").innerText =
+        product.stock;
+
+      document.getElementById("detailOrder").href =
+        "viber://chat?number=%2B959974439104";
+
+      document.getElementById("productModal")
+        .classList.add("show");
+
+      document.body.classList.add("modal-open");
+
+    }
+
+
+    /* CLOSE PRODUCT */
+
+    function closeProduct() {
+
+      document.getElementById("productModal")
+        .classList.remove("show");
+
+      document.body.classList.remove("modal-open");
+
+    }
+
+
+    /* CLICK OUTSIDE */
+
+    function closeOutside(event) {
+
+      if (
+        event.target ===
+        document.getElementById("productModal")
+      ) {
+
+        closeProduct();
+
+      }
+
+    }
+
+
+    /* ESC KEY */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          closeProduct();
+
+        }
+
+      }
+    );
+
+
+    /* CATEGORY */
+
+    let currentCategory = "all";
+
+
+    function filterProducts(category, button) {
+
+      currentCategory = category;
+
+      document
+        .querySelectorAll(".category-btn")
+        .forEach(btn => {
+
+          btn.classList.remove("active");
+
+        });
+
+
+      button.classList.add("active");
+
+      applyFilters();
+
+    }
+
+
+    /* SEARCH */
+
+    function searchProducts() {
+
+      applyFilters();
+
+    }
+
+
+    /* FILTER */
+
+    function applyFilters() {
+
+      const search =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase();
+
+
+      const productCards =
+        document.querySelectorAll(".product");
+
+
+      let found = 0;
+
+
+      productCards.forEach(card => {
+
+        const category =
+          card.dataset.category;
+
+
+        const text =
+          card.innerText.toLowerCase();
+
+
+        const categoryMatch =
+          currentCategory === "all" ||
+          category === currentCategory;
+
+
+        const searchMatch =
+          text.includes(search);
+
+
+        if (
+          categoryMatch &&
+          searchMatch
+        ) {
+
+          card.style.display = "block";
+
+          found++;
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+
+      const noResult =
+        document.getElementById("noResult");
+
+
+      if (found === 0) {
+
+        noResult.style.display = "block";
+
+      } else {
+
+        noResult.style.display = "none";
+
+      }
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>     searchMatch
+        ) {
+
+          card.style.display = "block";
+
+          found++;
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+
+      const noResult =
+        document.getElementById("noResult");
+
+
+      if (found === 0) {
+
+        noResult.style.display = "block";
+
+      } else {
+
+        noResult.style.display = "none";
+
+      }
+
+    }
+
+  </script>
 
 
 </body>
